@@ -19,8 +19,29 @@ import {
     ProjectButton,
     ProjectTextContainer
 } from "./Style";
+import { useState } from "react";
 export default function Projects() {
     const projectDisclosure = useDisclosure();
+    const [title, setTitle] = useState<string>("");
+    const [description, setDescription] = useState<string>("");
+    const [image, setImage] = useState<any>("");
+    const [haveWebsite, setHaveWebsite] = useState<boolean>(false);
+    const [haveGitRepo, setHaveGitRepo] = useState<boolean>(false);
+    const [technology, setTechnology] = useState<any>([]);
+
+    function setInfoModal(name: string){
+
+        if(name==="Candyland") {
+            setTitle("Candyland");
+            setDescription("Candyland is a graphical application composed of 3D elements, with an interactive scenario." +
+            "The world is made up of different static and animated 3D candy-themed objects. It is possible to change the camera, "+
+            "for perspective and orthogonal, as well as turn on and off lamps and ambient lights. " +
+            "It also contains a plane object that you can control.\nA group project with Rui Duarte.");
+            setTechnology(["JavaScript", "Three.js", "HTML", "WebGL"]);
+            projectDisclosure.onToggle();
+        }
+        
+    }
 
     return (
         <div id='projects'>
@@ -35,7 +56,7 @@ export default function Projects() {
                             <ProjectImage src={Candyland} alt='Project Candyland' />
                             <ProjectTextContainer>
                             <ProjectText>Candyland</ProjectText>
-                            <ProjectButton onClick={ projectDisclosure.onToggle}>View</ProjectButton>
+                            <ProjectButton onClick={() =>setInfoModal("Candyland")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
 
@@ -87,6 +108,19 @@ export default function Projects() {
             <ProjectModal
             isOpen={projectDisclosure.isOpen}
             onClose={projectDisclosure.onClose}
+            title={title}
+            setTitle={setTitle}
+            description={description}
+            setDescription={setDescription}
+            image={image}
+            setImage={setImage}
+            haveWebsite={haveWebsite}
+            setHaveWebsite={setHaveWebsite}
+            haveGitRepo={haveGitRepo}
+            setHaveGitRepo={setHaveGitRepo}
+            technology={technology}
+            setTechnology={setTechnology}
+            children={undefined}
             />
         </div>
        
