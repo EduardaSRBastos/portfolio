@@ -2,8 +2,8 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 70px;
-  height: 650px;
+  padding-top: 150px;
+  height: 1000px;
   background-color: #34353A;
 `;
 
@@ -80,4 +80,7 @@ export const ProjectButton = styled(Button)`
   color: black;
   margin-top: 15px;
   height: 30px !important;
+  :hover {
+    background: #c7a302 !important;
+  }
 `;

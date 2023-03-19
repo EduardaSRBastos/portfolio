@@ -1,4 +1,3 @@
-import Oc from "../../Images/Oc.png";
 import { BsGithub, BsLinkedin, BsFillEnvelopeFill } from 'react-icons/bs';
 import {
     Container,
@@ -12,9 +11,8 @@ import {
     YellowText,
     LinksText,
     IconContainer,
-    Icons
 } from "./Style";
-import { Link } from "@chakra-ui/react";
+import { Link, Icon } from "@chakra-ui/react";
 
 export default function About() {
 
@@ -26,18 +24,18 @@ export default function About() {
                     <Title>ABOUT ME</Title>
                 </TitleContainer>
                 <ItemsContainer>
-                    <Picture src={Oc} alt='Profile Picture' />
+                    <Picture src={"Images/Oc.png"} alt='Profile Picture' />
                     <TextContainer>
                         <AboutText>
-                            Hi! I’m <YellowText>Eduarda</YellowText>. <p/>
+                            Hi! I’m <YellowText>Eduarda</YellowText>. <br/>
                             <br/>
-                            I’m a Software and Web Developer.<p/>
-                            I have a Bachelor Degree in Computer Engineering.<p/>
+                            I’m a Software and Web Developer.<br/>
+                            I have a Bachelor Degree in Computer Engineering.<br/>
                             <br/>
                             I've always been curious about programming, and when I was a kid, 
                             I used to customize my Tumblr and blog themes by editing the HTML page. 
                             It was almost magical to see the page changing with lines of text. In high school, 
-                            I decided to take a computer course.<p/>
+                            I decided to take a computer course.<br/>
                             <br/>
                             In my free time, I like <LinksText onClick={(e) => {
                             e.preventDefault();
@@ -48,14 +46,14 @@ export default function About() {
                             }}>photography</LinksText>.
                         </AboutText>
                         <IconContainer>
-                            <Link href="https://github.com/EduardaSRBastos" target={"_blank"}>
-                                <Icons  as={BsGithub} />
+                            <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
+                                <Icon as={BsGithub} _hover={{color: "black"}} />
                             </Link>
-                            <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"}>
-                                <Icons as={BsLinkedin} />
+                            <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
+                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2"}} />
                             </Link>
-                            <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"}>
-                            <Icons as={BsFillEnvelopeFill} />
+                            <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
+                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610"}} />
                             </Link>
                         </IconContainer>
                     </TextContainer>

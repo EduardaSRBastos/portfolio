@@ -1,10 +1,9 @@
 import { HStack, Text } from "@chakra-ui/react";
 import styled from "styled-components";
-import balloon from "../../Images/SpeechBalloon.png";
 
 export const HomeContainer = styled(HStack)`
-  height: 620px;
-  background: url(${balloon}) center no-repeat;
+  height: 1000px;
+  background: url(Images/SpeechBalloon.png) center no-repeat;
   background-color: #34353A;
   background-size: 671px 482px;
 `;

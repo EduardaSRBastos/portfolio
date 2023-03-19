@@ -36,12 +36,12 @@ export default function Skills() {
 
                         <IconContainer>
                             <Icons as={SiVisualstudiocode}/>
-                            <IconText>Visual Studio<p/>VS Code</IconText>
+                            <IconText>Visual Studio<br/>VS Code</IconText>
                         </IconContainer>
 
                         <IconContainer>
                             <Icons as={TfiLayoutTabWindow}/>
-                            <IconText>WPF<p/>WinForms</IconText>
+                            <IconText>WPF<br/>WinForms</IconText>
                         </IconContainer>
                         
                         <IconContainer>

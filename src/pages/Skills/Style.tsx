@@ -2,8 +2,8 @@ import { Box, Text, Icon } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 100px;
-  height: 650px;
+  padding-top: 150px;
+  height: 1000px;
   background-color: #34353A;
 `;
 

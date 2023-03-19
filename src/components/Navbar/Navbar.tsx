@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../Images/LogoE.png";
 import {
     NavbarContainer,
     LogoContainer,
@@ -25,9 +24,13 @@ export default function Navbar() {
         setColorchange(true);
         setAux(3);
       }
-       else{
-         setColorchange(false);
-       }
+      else if(window.scrollY >= 2360 && window.scrollY <= 3020){
+        setColorchange(true);
+        setAux(4);
+      }
+        else{
+            setColorchange(false);
+        }
   };
   window.addEventListener('scroll', changeNavbarColor);
     return (
@@ -36,7 +39,7 @@ export default function Navbar() {
                     e.preventDefault();
                     window.location.href='#';
                     }}>  
-                    <Logo src={logo} alt='Logo'/>
+                    <Logo src={"Images/LogoE.png"} alt='Logo'/>
             </LogoContainer>
             <Buttons>
                 <ButtonContainer onClick={(e) => {
@@ -70,7 +73,7 @@ export default function Navbar() {
                     e.preventDefault();
                     window.location.href='#contact';
                     }}>  
-                    <Button>
+                    <Button className={(colorChange && aux === 4) ? 'navbar colorChange' : 'navbar'}>
                         CONTACT
                     </Button>
                 </ButtonContainer>

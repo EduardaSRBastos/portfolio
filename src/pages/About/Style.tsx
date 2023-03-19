@@ -2,8 +2,8 @@ import { Box, Text, Image, Icon } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 100px;
-  height: 650px;
+  padding-top: 150px;
+  height: 1000px;
   background-color: #34353A;
 `;
 
@@ -65,11 +65,6 @@ export const LinksText = styled.a`
 export const IconContainer = styled.div`
   display: flex; 
   margin: auto;
-`;
-
-export const Icons = styled(Icon)`
   font-size: 40px;
   color: white;
-  cursor: pointer;
-  margin: 40px 30px;
 `;

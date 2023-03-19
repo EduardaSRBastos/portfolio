@@ -1,10 +1,10 @@
 import { Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, 
-  ModalFooter, ModalHeader, ModalOverlay, ModalProps, Tag, Text, Image } from "@chakra-ui/react"
+  ModalOverlay, ModalProps, Text, Image, Link } from "@chakra-ui/react";
+  import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 
-import Oc from "../../Images/Oc.png";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./slick-theme.css";
 import Slider from "react-slick";
 
 export default function ProjectModal(
@@ -19,6 +19,9 @@ export default function ProjectModal(
   : ProjectModalProps) {
     function closeModal() {
       setColor([]);
+      setColumn(2);
+      setHaveWebsite("");
+      setHaveGitRepo("");
       props.onClose();
   }
 
@@ -29,56 +32,79 @@ export default function ProjectModal(
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    nextArrow: <IoIosArrowForward color="white"/>,
+    prevArrow: <IoIosArrowBack color="white" />,
   };
 
   const [color, setColor] = useState<any>([]);
   var i = 0;
+  const [column, setColumn] = useState<number>(2);
 
-  function generateRandomColor() {
-    for(var i = 0; i< technology.length; i++) {
+  function generateRandomColor(size:number) {
+    for(var i = 0; i< size; i++) {
       var auxColor=(Math.floor(100000 + Math.random() * 900000));
       color.push(auxColor);
     }
+  }
+
+  useEffect(()=> {
+    if(technology.length > 9) {
+      setColumn(4);
+    }else if(technology.length > 4) {
+      setColumn(3);
+    }else{
+      setColumn(2);
     }
+  },[column, technology.length])
   
   useEffect(()=>{ 
-        generateRandomColor();
-  },[props.isOpen])
+        generateRandomColor(technology.length);
+  },[generateRandomColor(technology.length)])
 
   return (
     <>
-      <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true}>
+      <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true} scrollBehavior="inside">
         <ModalOverlay />
-        <ModalContent bg="#34353A" maxW="1025px" maxH="550px">
-          
-          <ModalHeader color="#FFDA18">{title}</ModalHeader>
-          <ModalCloseButton />
+        <ModalContent bg="#34353A" maxW="1200px" maxH="600px" m="auto">
+          <ModalCloseButton fontSize="20px" color="white" _hover={{ color:"#FFDA18", fontSize:"24px" }}/>
 
-          <ModalBody>
-            <Container display="flex">
-              <Container ml="-250px" maxW="70%">
+          <ModalBody mt="40px">
+            <Container display="flex" h="350px" w="800px">
+              <Container ml="-320px" maxW="600px" pos="absolute">
                 <Slider {...settings}>
-                  <Image  src={Oc} alt='Profile Picture' />
-                  <Image src={Oc} alt='Profile Picture' />
+                { image.map( (e:number) => 
+                  <Image  src={`Images/${e}`} alt={title} w="530" h="300" objectFit="contain"/>
+                  )}
                 </Slider>
               </Container>
-              <Container textAlign="justify">
-              <Text whiteSpace="pre-wrap" color="white">{description}</Text>
+              <Container textAlign="justify" pos="absolute" ml="300px" cursor="default">
+              <Text color="#FFDA18" fontSize="32px" mb="20px" mt="-10px" textAlign="center">{title}</Text>
+              <Text color="white" fontSize="20px" whiteSpace="pre-line">{description}</Text>
               </Container>
             </Container>
-            <Container display="flex" mt="35px" ml="0">
-              <Container ml="10px" display="flex">
-                <Container>
+            <Container display="flex" ml="0">
+              <Container display="flex" w="1200px" mb="10px">
+                <Container display="grid" gridTemplateColumns={`repeat(${column}, 1fr)`} m="auto" p="auto">
                 { technology.map( (e:number) => 
-                  <Tag bg={"#" + color[i++]} color="white" fontSize="14px" 
-                  textShadow="0 0 1px #000" m="5px" p="8px" key={e}>
-                    { e }</Tag>
+                  <Button bg={"#" + color[++i]} _hover={{ opacity:"0.7" }} color="white" fontSize="14px" 
+                  textShadow="0 0 1px #000" m="5px" p="8px" w="fit-content" key={e}>
+                    {e}
+                  </Button>
                   )}
                 </Container>
-                <Button whiteSpace="nowrap" fontSize="16px" bg="#BDBDBD" p="10px 45px" m="10px 50px">View GitHub<br/>Repo</Button>
+                {(haveGitRepo.length>0) &&(<>
+                <Link href={haveGitRepo} isExternal m="25px" ml="200px">
+                  <Button whiteSpace="nowrap" fontSize="16px" bg="#BDBDBD" p="25px 10px" _hover={{ bg: "#dedede" }}>
+                      View GitHub<br/>Repo</Button>
+                </Link>
+                </>)}
               </Container>
-              <Container ml="100px" p="8px 50px">
-                <Button fontSize="20px" bg="#FFDA18" m="10px">View Website</Button>
+              <Container p="8px 40px" ml="63%" pos="absolute">
+              {(haveWebsite.length>0) &&(<>
+                <Link href={haveWebsite} isExternal>
+                  <Button fontSize="20px" bg="#FFDA18" p="25px 15px" _hover={{ bg: "#c7a302" }}>View Website</Button>
+                </Link>
+                </>)}
               </Container>
             </Container>
           </ModalBody>
@@ -95,10 +121,10 @@ interface ProjectModalProps extends ModalProps {
   setDescription: (a: string) => void;
   image: any;
   setImage: (a: any) => void;
-  haveWebsite: boolean;
-  setHaveWebsite: (a: boolean) => void;
-  haveGitRepo: boolean;
-  setHaveGitRepo: (a: boolean) => void;
+  haveWebsite: string;
+  setHaveWebsite: (a: string) => void;
+  haveGitRepo: string;
+  setHaveGitRepo: (a: string) => void;
   technology: any;
   setTechnology: (a: any) => void;
 }
