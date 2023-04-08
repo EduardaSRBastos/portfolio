@@ -4,6 +4,7 @@ html {
   scrollbar-color: #FFDA18 #2D2E32;
   scrollbar-width: thin;
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 
 body {
@@ -13,7 +14,20 @@ body {
 
 .navbar.colorChange{
   color: #FFDA18;
-    text-decoration: underline;
+  position: relative;
+  background-color: transparent;
+  transition: transform 0.5s ease;
+}
+.navbar.colorChange:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.26vh;
+  bottom: 0;
+  left: 0;
+  background-color: #FFDA18;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 ::-webkit-scrollbar {

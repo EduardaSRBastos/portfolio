@@ -13,6 +13,7 @@ import {
     IconContainer,
 } from "./Style";
 import { Link, Icon } from "@chakra-ui/react";
+import Oc from "../../Images/Oc.png"
 
 export default function About() {
 
@@ -24,7 +25,7 @@ export default function About() {
                     <Title>ABOUT ME</Title>
                 </TitleContainer>
                 <ItemsContainer>
-                    <Picture src={"Images/Oc.png"} alt='Profile Picture' />
+                    <Picture src={Oc} alt='Profile Picture' />
                     <TextContainer>
                         <AboutText>
                             Hi! I’m <YellowText>Eduarda</YellowText>. <br/>
@@ -47,13 +48,13 @@ export default function About() {
                         </AboutText>
                         <IconContainer>
                             <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
-                                <Icon as={BsGithub} _hover={{color: "black"}} />
+                                <Icon as={BsGithub} _hover={{color: "black"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                             <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
-                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2"}} />
+                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                             <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
-                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610"}} />
+                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                         </IconContainer>
                     </TextContainer>

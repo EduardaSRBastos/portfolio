@@ -65,44 +65,44 @@ export default function ProjectModal(
     <>
       <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true} scrollBehavior="inside">
         <ModalOverlay />
-        <ModalContent bg="#34353A" maxW="1200px" maxH="600px" m="auto">
-          <ModalCloseButton fontSize="20px" color="white" _hover={{ color:"#FFDA18", fontSize:"24px" }}/>
+        <ModalContent bg="#34353A" maxW="169vh" maxH="87vh" m="auto">
+          <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"#FFDA18", fontSize:"3.4vh" }}/>
 
-          <ModalBody mt="40px">
-            <Container display="flex" h="350px" w="800px">
-              <Container ml="-320px" maxW="600px" pos="absolute">
+          <ModalBody mt="5.65vh">
+            <Container display="flex" h="49.5vh" w="117vh">
+              <Container ml="-45vh" maxW="84vh" pos="absolute">
                 <Slider {...settings}>
                 { image.map( (e:number) => 
-                  <Image  src={`Images/${e}`} alt={title} w="530" h="300" objectFit="contain"/>
+                  <Image  src={`../../Images/${e}`} alt={title} w="76vh" h="42.5vh" maxW="100%" objectFit="contain"/>
                   )}
                 </Slider>
               </Container>
-              <Container textAlign="justify" pos="absolute" ml="300px" cursor="default">
-              <Text color="#FFDA18" fontSize="32px" mb="20px" mt="-10px" textAlign="center">{title}</Text>
-              <Text color="white" fontSize="20px" whiteSpace="pre-line">{description}</Text>
+              <Container textAlign="justify" pos="absolute" ml="42.3vh" cursor="default">
+              <Text color="#FFDA18" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
+              <Text color="white" fontSize="2.9vh" whiteSpace="pre-line">{description}</Text>
               </Container>
             </Container>
             <Container display="flex" ml="0">
-              <Container display="flex" w="1200px" mb="10px">
+              <Container display="flex" w="177vh" mb="1.5vh">
                 <Container display="grid" gridTemplateColumns={`repeat(${column}, 1fr)`} m="auto" p="auto">
                 { technology.map( (e:number) => 
-                  <Button bg={"#" + color[++i]} _hover={{ opacity:"0.7" }} color="white" fontSize="14px" 
-                  textShadow="0 0 1px #000" m="5px" p="8px" w="fit-content" key={e}>
+                  <Button bg={"#" + color[++i]} _hover={{ opacity:"0.7" }} color="white" fontSize="2vh" 
+                  textShadow="0 0 0.14vh #000" m="0.7vh" p="1.2vh" w="fit-content" key={e}>
                     {e}
                   </Button>
                   )}
                 </Container>
                 {(haveGitRepo.length>0) &&(<>
-                <Link href={haveGitRepo} isExternal m="25px" ml="200px">
-                  <Button whiteSpace="nowrap" fontSize="16px" bg="#BDBDBD" p="25px 10px" _hover={{ bg: "#dedede" }}>
+                <Link href={haveGitRepo} isExternal m="3.6vh" ml="28vh">
+                  <Button whiteSpace="nowrap" fontSize="2.3vh" bg="#BDBDBD" p="3.6vh 1.4vh" _hover={{ bg: "#dedede" }}>
                       View GitHub<br/>Repo</Button>
                 </Link>
                 </>)}
               </Container>
-              <Container p="8px 40px" ml="63%" pos="absolute">
+              <Container p="1.2vh 5.8vh" ml="63%" pos="absolute">
               {(haveWebsite.length>0) &&(<>
                 <Link href={haveWebsite} isExternal>
-                  <Button fontSize="20px" bg="#FFDA18" p="25px 15px" _hover={{ bg: "#c7a302" }}>View Website</Button>
+                  <Button fontSize="2.85vh" bg="#FFDA18" p="3.6vh 2.1vh" _hover={{ bg: "#c7a302" }}>View Website</Button>
                 </Link>
                 </>)}
               </Container>

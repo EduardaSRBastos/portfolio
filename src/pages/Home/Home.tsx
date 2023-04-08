@@ -6,7 +6,6 @@ import {
 } from "./Style";
 
 export default function Home() {
-
     return (
         <div id=''>
             <HomeContainer>

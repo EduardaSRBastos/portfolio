@@ -2,10 +2,10 @@ import { HStack, Image } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const NavbarContainer = styled(HStack)`
-  height: 70px;
+  height: 10vh;
   background-color: #2D2E32;
-  box-shadow: 0px 3px 10px 0px #00000058;
-  border-bottom: 1px solid black; 
+  box-shadow: 0px 0.4vh 1.4vh 0 #00000058;
+  border-bottom: 0.14vh solid black; 
   position: fixed;
   width: 100%;
   top: 0;
@@ -13,8 +13,8 @@ export const NavbarContainer = styled(HStack)`
 `;
 
 export const LogoContainer = styled.div`
-  margin-left: 50px;
-  height: 70px;
+  margin-left: 7vh;
+  height: 9.8vh;
 `;
 
 export const Logo = styled(Image)`
@@ -24,19 +24,34 @@ export const Logo = styled(Image)`
 
 export const Buttons = styled(HStack)`
   position: absolute;
-  right: 50px;
+  right: 7vh;
 `;
 
 export const ButtonContainer = styled.div`
-  padding: 20px;
+  padding: 2.8vh;
 `;
 
 export const Button = styled.button`
   color: white;
   background-color: transparent;
-  font-size: 30px;
+  font-size: 4.2vh;
+  position: relative;
+  :after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.3vh;
+    bottom: 0;
+    left: 0;
+    background-color: #FFDA18;
+    transition: transform 0.25s ease-out;
+  }
+  :hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
   :hover {
     color: #FFDA18;
-    text-decoration: underline;
   }
 `;

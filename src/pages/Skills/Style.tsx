@@ -2,8 +2,8 @@ import { Box, Text, Icon } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 150px;
-  height: 1000px;
+  padding-top: 17.5vh;
+  height: 148vh;
   background-color: #34353A;
 `;
 
@@ -15,33 +15,33 @@ export const TitleContainer = styled.div`
 
 export const Line = styled(Box)`
   background: #FFDA18;
-  height: 2px;
-  width: 40px;
-  margin-right: 20px;
-  box-shadow: 0 0 5px black;
+  height: 0.2vh;
+  width: 6vh;
+  margin-right: 2.9vh;
+  box-shadow: 0 0 0.7vh black;
 `;
 
 export const Title = styled(Text)`
-  font-size: 32px;
+  font-size: 4.50vh;
   color: #FFDA18;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 0.7vh black;
 `;
 
 export const ItemsContainer = styled.div`
   display: grid; 
   align-items: center;
   background: #4F5056;
-  margin: 50px 150px;
-  border-radius: 20px;
-  padding-bottom: 50px;
+  margin: 7vh 20.5vh;
+  border-radius: 2.5vh;
+  padding-bottom: 7vh;
   width: 80%;
-  min-width: 900px;
+  min-width: 134vh;
 `;
 
 
 export const IconsContainer = styled.div`
   display: flex; 
-  margin: -30px 20px 20px -30px;
+  margin: -4.3vh 2.7vh 2.8vh -2.8vh;
 `;
 
 export const IconContainer = styled.div`
@@ -49,20 +49,22 @@ export const IconContainer = styled.div`
   margin: auto;
   padding: auto;
   height: auto;
-  max-width: 140px;
+  max-width: 100%;
   text-align: center;
   color: white;
+  transition: 0.4s;
   :hover {
     color: #FFDA18;
   }
 `;
 
 export const Icons = styled(Icon)`
-  font-size: 60px;
-  margin: 90px 60px 10px;
+  font-size: 8.4vh;
+  margin: 12.7vh 8vh 1.4vh;
+  max-width: 100%;
 `;
 
 export const IconText = styled(Text)`
-  font-size: 20px;
+  font-size: 2.8vh;
   cursor: default;
 `;

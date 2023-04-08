@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LogoE from "../../Images/LogoE.png";
 import {
     NavbarContainer,
     LogoContainer,
@@ -12,19 +13,19 @@ export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
     const changeNavbarColor = () =>{
-       if(window.scrollY >= 380 && window.scrollY <= 1040){
+       if(window.scrollY >= 500 && window.scrollY <= 1500){
          setColorchange(true);
          setAux(1);
        }
-       else if(window.scrollY >= 1040 && window.scrollY <= 1700){
+       else if(window.scrollY >= 1500 && window.scrollY <= 2500){
         setColorchange(true);
         setAux(2);
       }
-      else if(window.scrollY >= 1700 && window.scrollY <= 2360){
+      else if(window.scrollY >= 2500 && window.scrollY <= 3500){
         setColorchange(true);
         setAux(3);
       }
-      else if(window.scrollY >= 2360 && window.scrollY <= 3020){
+      else if(window.scrollY >= 3500 && window.scrollY <= 4500){
         setColorchange(true);
         setAux(4);
       }
@@ -33,18 +34,19 @@ export default function Navbar() {
         }
   };
   window.addEventListener('scroll', changeNavbarColor);
+  
     return (
         <NavbarContainer>
             <LogoContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='#';
+                    window.location.href='/#';
                     }}>  
-                    <Logo src={"Images/LogoE.png"} alt='Logo'/>
+                    <Logo src={LogoE} alt='Logo'/>
             </LogoContainer>
             <Buttons>
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='#about';
+                    window.location.href='/#about';
                     }}>  
                     <Button className={(colorChange && aux === 1) ? 'navbar colorChange' : 'navbar'}>
                         ABOUT ME
@@ -53,7 +55,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='#skills';
+                    window.location.href='/#skills';
                     }}>
                     <Button className={(colorChange && aux === 2) ? 'navbar colorChange' : 'navbar'}>
                         SKILLS
@@ -62,7 +64,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='#projects';
+                    window.location.href='/#projects';
                     }}>
                     <Button className={(colorChange && aux === 3) ? 'navbar colorChange' : 'navbar'}>
                         PROJECTS
@@ -71,7 +73,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='#contact';
+                    window.location.href='/#contact';
                     }}>  
                     <Button className={(colorChange && aux === 4) ? 'navbar colorChange' : 'navbar'}>
                         CONTACT
