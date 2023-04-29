@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ButtonHome, ImageCat, LinkButton, NotFoundContainer, Text404, TextContainer, TextDoesntExist, TextImageContainer, TextNotFound, TextOooops } from "./Style";
 import Cat404 from "../../Images/Cat404.png"
 

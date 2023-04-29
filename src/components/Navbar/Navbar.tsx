@@ -13,19 +13,19 @@ export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
     const changeNavbarColor = () =>{
-       if(window.scrollY >= 500 && window.scrollY <= 1500){
+       if(window.scrollY >= 300 && window.scrollY <= 1000){
          setColorchange(true);
          setAux(1);
        }
-       else if(window.scrollY >= 1500 && window.scrollY <= 2500){
+       else if(window.scrollY >= 1000 && window.scrollY <= 1700){
         setColorchange(true);
         setAux(2);
       }
-      else if(window.scrollY >= 2500 && window.scrollY <= 3500){
+      else if(window.scrollY >= 1700 && window.scrollY <= 2400){
         setColorchange(true);
         setAux(3);
       }
-      else if(window.scrollY >= 3500 && window.scrollY <= 4500){
+      else if(window.scrollY >= 2400 && window.scrollY <= 3000){
         setColorchange(true);
         setAux(4);
       }

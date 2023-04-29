@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 148vh;
+  height: 100vh;
   background-color: #34353A;
 `;
 
@@ -31,7 +31,7 @@ export const ItemsContainer = styled.div`
   display: grid; 
   align-items: center;
   background: #4F5056;
-  margin: 7vh 20.5vh;
+  margin: 5vh 20.5vh;
   border-radius: 2.5vh;
   padding-bottom: 7vh;
   width: 80%;

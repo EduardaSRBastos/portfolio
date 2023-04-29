@@ -7,6 +7,8 @@ import Navbar from "./Navbar/Navbar";
 import {Outlet} from 'react-router-dom';
 import ScrollButton from "./ScrollButton/ScrollButton";
 import { useEffect, useState } from "react";
+import { Home } from "../pages";
+import { SpeechBalloon } from "./HomeSpeechBalloon/JavaScript/app";
 
 const Layout = () => {
     const [is404, setIs404] = useState(false);
@@ -31,7 +33,7 @@ const Layout = () => {
             <>
             <ScrollButton/>
             <Navbar/>
-            <Outlet/>
+            <Home/>
             <About/>
             <Skills/>
             <Projects/>

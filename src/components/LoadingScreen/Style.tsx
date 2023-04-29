@@ -20,7 +20,7 @@ function getBackgroundColor(i: number, colorsIndex: number) {
   }
   
 
-export const Body = styled.body`
+export const Body = styled.div`
     padding:0;
     margin:0;
     height: 100vh;
