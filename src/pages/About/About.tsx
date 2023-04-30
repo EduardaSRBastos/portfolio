@@ -4,6 +4,7 @@ import {
     TitleContainer,
     Title,
     Line,
+    PictureContainer,
     Picture,
     ItemsContainer,
     TextContainer,
@@ -13,19 +14,21 @@ import {
     IconContainer,
 } from "./Style";
 import { Link, Icon } from "@chakra-ui/react";
-import Oc from "../../Images/Oc.png"
+import Oc from "../../Files/Oc.png"
 
 export default function About() {
 
     return (
-        <div id='about'>
-            <Container>
+        <div id='about' >
+            <Container >
                 <TitleContainer>
                     <Line />
                     <Title>ABOUT ME</Title>
                 </TitleContainer>
-                <ItemsContainer>
+                <ItemsContainer style={{zIndex: 1, position:"absolute"}}>
+                    <PictureContainer>
                     <Picture src={Oc} alt='Profile Picture' />
+                    </PictureContainer>
                     <TextContainer>
                         <AboutText>
                             Hi! I’m <YellowText>Eduarda</YellowText>. <br/>
@@ -48,13 +51,13 @@ export default function About() {
                         </AboutText>
                         <IconContainer>
                             <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
-                                <Icon as={BsGithub} _hover={{color: "black"}} transition="0.4s" maxW=" 100%"/>
+                                <Icon as={BsGithub} _hover={{color: "black", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                             <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
-                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2"}} transition="0.4s" maxW=" 100%"/>
+                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                             <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
-                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610"}} transition="0.4s" maxW=" 100%"/>
+                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
                             </Link>
                         </IconContainer>
                     </TextContainer>

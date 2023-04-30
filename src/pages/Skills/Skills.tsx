@@ -22,7 +22,7 @@ export default function Skills() {
                     <Line />
                     <Title>SKILLS</Title>
                 </TitleContainer>
-                <ItemsContainer>
+                <ItemsContainer  style={{zIndex: 1, position:"absolute"}}>
                     <IconsContainer>
                         <IconContainer>
                             <Icons as={SiCsharp}/>

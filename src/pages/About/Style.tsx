@@ -27,11 +27,22 @@ export const Title = styled(Text)`
   text-shadow: 0 0 0.7vh black;
 `;
 
-export const Picture = styled(Image)`
+export const PictureContainer = styled.div`
   height: 47.8vh;
-  border-radius: 29vh;
+  border-radius: 30vh;
+  width: 60%;
+  height: 60%;
   margin: -4.4vh 11.5vh 7vh 5.5vh;
-  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+`;
+
+export const Picture = styled(Image)`
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5);
+  ${PictureContainer}:hover & {
+    transform: scale(1.15);
+  }
 `;
 
 export const ItemsContainer = styled.div`

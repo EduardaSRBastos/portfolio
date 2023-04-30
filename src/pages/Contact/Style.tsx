@@ -51,8 +51,10 @@ export const EmailButton = styled(Button)`
   color: black;
   width: fit-content;
   justify-self: center;
+  transition: transform 0.4s ease-in-out;
   :hover {
     background: #c7a302 !important;
+    transform: scale(1.1);
   }
 `;
 

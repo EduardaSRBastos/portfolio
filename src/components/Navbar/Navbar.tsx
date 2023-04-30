@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LogoE from "../../Images/LogoE.png";
+import LogoE from "../../Files/LogoE.png";
 import {
     NavbarContainer,
     LogoContainer,

@@ -33,11 +33,9 @@ useEffect(()=>{
       <BrowserRouter>
       {!isLoading ? (
         <Routes>
-          <Route element={<Layout />}>
-            <Route path='/404' element={<NotFound />}/>
-            <Route path="*" element={ <Navigate replace to="/404" /> }/>
-            <Route path={"/"} element={<Home />} />
-          </Route>
+          <Route path="/" element={<Layout />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
+          <Route path="/404" element={<NotFound />} />
         </Routes>
       ): (
         <LoadingScreen />

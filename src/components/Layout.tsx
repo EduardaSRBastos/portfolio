@@ -8,7 +8,8 @@ import {Outlet} from 'react-router-dom';
 import ScrollButton from "./ScrollButton/ScrollButton";
 import { useEffect, useState } from "react";
 import { Home } from "../pages";
-import { SpeechBalloon } from "./HomeSpeechBalloon/JavaScript/app";
+
+import CatPawBackground from "../components/Background/CatPawBackground";
 
 const Layout = () => {
     const [is404, setIs404] = useState(false);
@@ -32,6 +33,7 @@ const Layout = () => {
         ): (
             <>
             <ScrollButton/>
+            <CatPawBackground />
             <Navbar/>
             <Home/>
             <About/>

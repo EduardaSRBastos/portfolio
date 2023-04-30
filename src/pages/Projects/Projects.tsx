@@ -111,7 +111,7 @@ export default function Projects() {
                     <Line />
                     <Title>PROJECTS</Title>
                 </TitleContainer>
-                <ItemsContainer>
+                <ItemsContainer  style={{zIndex: 1, position:"relative"}}>
                     <ProjectsContainer>
                         <ProjectContainer>
                             <ProjectImage src={Candyland} alt='Project Candyland' />

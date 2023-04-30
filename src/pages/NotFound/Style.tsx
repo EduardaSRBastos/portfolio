@@ -10,6 +10,7 @@ export const NotFoundContainer = styled.div`
 
 export const TextImageContainer = styled.div`
     display: flex;
+    cursor: default;
 `;
 
 export const TextContainer = styled.div`
@@ -51,12 +52,16 @@ export const ButtonHome = styled(Button)`
     color: black;
     width: fit-content;
     justify-self: center;
+    transition: transform 0.4s ease-in-out;
     :hover {
       background: #c7a302 !important;
+      transform: scale(1.1);
     }
 `;
 
 export const ImageCat = styled(Image)`
-    width: 45%;
-    height: 100%;
+  width: 42%;
+  height: 100%;
+  cursor: ${props => props.isHovering ? 'pointer' : 'default'};
+  object-fit: cover;
 `;

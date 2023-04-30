@@ -9,7 +9,7 @@ export const NavbarContainer = styled(HStack)`
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 `;
 
 export const LogoContainer = styled.div`

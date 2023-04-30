@@ -49,12 +49,14 @@ export const IconContainer = styled.div`
   margin: auto;
   padding: auto;
   height: auto;
+  position: relative;
   max-width: 100%;
   text-align: center;
   color: white;
-  transition: 0.4s;
+  transition: all 0.5s ease-in-out;
   :hover {
     color: #FFDA18;
+    transform: scale(1.2);
   }
 `;
 

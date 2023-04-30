@@ -28,9 +28,11 @@ export default function ProjectModal(
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
     adaptiveHeight: true,
     nextArrow: <IoIosArrowForward color="white"/>,
     prevArrow: <IoIosArrowBack color="white" />,
