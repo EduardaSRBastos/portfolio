@@ -17,7 +17,8 @@ import {
     ProjectText,
     ProjectImage,
     ProjectButton,
-    ProjectTextContainer
+    ProjectTextContainer,
+    ProjectDescription
 } from "./Style";
 import { useState } from "react";
 export default function Projects() {
@@ -61,7 +62,7 @@ export default function Projects() {
             "and a program that displays the current project and its related information, "+ 
             "the projects carried out and their components, the each mold constituent, "+
             "the customers and their project-related information.");
-            setTechnology(["C# .NET", "SQL"]);
+            setTechnology(["C# .NET", "SQL", "WinForms"]);
             setImage(["SBConceptMolds.png", "SBConceptMolds2.png", "SBConceptMolds3.png", "SBConceptMolds4.png"]);
             setHaveGitRepo("https://github.com/EduardaSRBastos/FinalProject-2018");
             projectDisclosure.onToggle();
@@ -117,6 +118,7 @@ export default function Projects() {
                             <ProjectImage src={Candyland} alt='Project Candyland' />
                             <ProjectTextContainer>
                             <ProjectText>Candyland</ProjectText>
+                            <ProjectDescription>Three.js</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("Candyland")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
@@ -125,6 +127,7 @@ export default function Projects() {
                             <ProjectImage src={HMRE3} alt='Project HMRE' />
                             <ProjectTextContainer>
                             <ProjectText>HMRE</ProjectText>
+                            <ProjectDescription>HTML</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("HMRE")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
@@ -133,6 +136,7 @@ export default function Projects() {
                             <ProjectImage src={SBConceptMolds} alt='Project SB Concept Molds' />
                             <ProjectTextContainer>
                             <ProjectText>SB Concept Molds</ProjectText>
+                            <ProjectDescription>WinForms</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("SBConceptMolds")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
@@ -143,6 +147,7 @@ export default function Projects() {
                             <ProjectImage src={GameShop} alt='Project GameShop' />
                             <ProjectTextContainer>
                             <ProjectText>GameShop</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("GameShop")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
@@ -151,6 +156,7 @@ export default function Projects() {
                             <ProjectImage src={BeeTheBest} alt='Project Bee The Best' />
                             <ProjectTextContainer>
                             <ProjectText>Bee The Best</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("BeeTheBest")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
@@ -159,6 +165,7 @@ export default function Projects() {
                             <ProjectImage src={BeeIn} alt='Project BeeIn' />
                             <ProjectTextContainer>
                             <ProjectText>BeeIn</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
                             <ProjectButton onClick={() =>setInfoModal("BeeIn")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>

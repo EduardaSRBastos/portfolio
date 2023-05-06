@@ -1,4 +1,4 @@
-import { BsGithub, BsLinkedin, BsFillEnvelopeFill } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsFillEnvelopeFill, BsFileEarmarkPersonFill } from 'react-icons/bs';
 import {
     Container,
     TitleContainer,
@@ -14,7 +14,7 @@ import {
     EmailText,
     IconContainer,
 } from "./Style";
-import { FormControl, FormErrorMessage, Icon, Input, Link, Textarea } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, Icon, Input, Link, Textarea, Tooltip } from "@chakra-ui/react";
 import { useEffect, useState } from 'react';
 
 export default function Contact() {
@@ -58,15 +58,26 @@ export default function Contact() {
                         <DevText>Software and Web Developer</DevText>
                         <EmailText> <br/> Email: eduardasofia2000@gmail.com</EmailText>
                         <IconContainer>
-                            <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
-                                <Icon as={BsGithub} _hover={{color: "black", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
-                                <Icon as={BsLinkedin} _hover={{color: "#0A66C2", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
-                            </Link>
-                            <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
-                                <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
-                            </Link>
+                            <Tooltip hasArrow label="GitHub"  openDelay={150} bg="black">
+                                <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
+                                    <Icon as={BsGithub} _hover={{color: "black", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                </Link>
+                            </Tooltip>
+                            <Tooltip hasArrow label="LinkedIn"  openDelay={150} bg="#0A66C2">
+                                <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
+                                    <Icon as={BsLinkedin} _hover={{color: "#0A66C2", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                </Link>
+                            </Tooltip>
+                            <Tooltip hasArrow label="Mail"  openDelay={150} bg="#c71610">
+                                <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
+                                    <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                </Link>
+                            </Tooltip>
+                            <Tooltip hasArrow label="Resume"  openDelay={150} bg="#4940f8">
+                                <Link href="./EduardaBastosCV.pdf" download = "EduardaResume.pdf" target={"_blank"} m="40px 30px">
+                                    <Icon as={BsFileEarmarkPersonFill} _hover={{color: "#4940f8", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                </Link>
+                            </Tooltip>
                         </IconContainer>
                     </TextContainer>
                 </ItemsContainer>
