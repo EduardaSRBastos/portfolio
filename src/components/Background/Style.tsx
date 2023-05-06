@@ -17,7 +17,7 @@ export const Paw = styled(Box)`
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: pawAnimation 4s linear infinite;
+    animation: pawAnimation 5s linear infinite;
 
     @keyframes pawAnimation {
         0% {

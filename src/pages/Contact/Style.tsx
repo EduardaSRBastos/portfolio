@@ -53,7 +53,7 @@ export const EmailButton = styled(Button)`
   justify-self: center;
   transition: transform 0.4s ease-in-out;
   :hover {
-    background: #c7a302 !important;
+    filter: brightness(110%);
     transform: scale(1.1);
   }
 `;

@@ -96,7 +96,7 @@ export default function ProjectModal(
                 </Container>
                 {(haveGitRepo.length>0) &&(<>
                 <Link href={haveGitRepo} isExternal m="3.6vh" ml="28vh">
-                  <Button whiteSpace="nowrap" fontSize="2.3vh" bg="#BDBDBD" p="3.6vh 1.4vh" _hover={{ bg: "#dedede" }}>
+                  <Button whiteSpace="nowrap" fontSize="2.3vh" bg="#BDBDBD" p="3.6vh 1.4vh" _hover={{ filter: "brightness(110%)", transform: "scale(1.1)" }}>
                       View GitHub<br/>Repo</Button>
                 </Link>
                 </>)}
@@ -104,7 +104,7 @@ export default function ProjectModal(
               <Container p="1.2vh 5.8vh" ml="63%" pos="absolute">
               {(haveWebsite.length>0) &&(<>
                 <Link href={haveWebsite} isExternal>
-                  <Button fontSize="2.85vh" bg="#FFDA18" p="3.6vh 2.1vh" _hover={{ bg: "#c7a302" }}>View Website</Button>
+                  <Button fontSize="2.85vh" bg="#FFDA18" p="3.6vh 2.1vh" _hover={{ filter: "brightness(110%)", transform: "scale(1.1)" }}>View Website</Button>
                 </Link>
                 </>)}
               </Container>

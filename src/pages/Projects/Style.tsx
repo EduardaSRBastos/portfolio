@@ -48,7 +48,7 @@ export const ProjectContainer = styled.div`
           position:absolute;
           width:100%;
           height:100%;
-          box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+          box-shadow:inset 0px 0px 3px 1px rgba(52,53,58,1);
       }
   transition: .5s ease-in-out;
   :hover {
@@ -94,6 +94,7 @@ export const ProjectButton = styled(Button)`
   margin-top: 2vh;
   height: 4.3vh !important;
   :hover {
-    background: #c7a302 !important;
+    filter: brightness(110%);
+    transform: scale(1.1);
   }
 `;

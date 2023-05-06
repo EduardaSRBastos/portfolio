@@ -15,6 +15,34 @@ export const NavbarContainer = styled(HStack)`
 export const LogoContainer = styled.div`
   margin-left: 7vh;
   height: 9.8vh;
+
+  :hover {
+    animation: boing 0.9s both;
+  }
+
+ @keyframes boing {
+   0% {
+     transform: scale3d(1.1, 1.1, 1.1);
+   }
+   30% {
+     transform: scale3d(1.35, 0.85, 1.1);
+   }
+   40% {
+     transform: scale3d(0.85, 1.35, 1.1);
+   }
+   50% {
+     transform: scale3d(1.25, 0.95, 1.1);
+   }
+   65% {
+     transform: scale3d(1.05, 1.15, 1.1);
+   }
+   75% {
+     transform: scale3d(1.15, 1.05, 1.1);
+   }
+   100% {
+     transform: scale3d(1.1, 1.1, 1.1);
+   }
+ }
 `;
 
 export const Logo = styled(Image)`

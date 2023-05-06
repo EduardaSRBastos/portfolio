@@ -14,7 +14,7 @@ import {
     IconContainer,
 } from "./Style";
 import { Link, Icon } from "@chakra-ui/react";
-import Oc from "../../Files/Oc.png"
+import Oc from "../../Files/Oc.png";
 
 export default function About() {
 
@@ -41,12 +41,12 @@ export default function About() {
                             It was almost magical to see the page changing with lines of text. In high school, 
                             I decided to take a computer course.<br/>
                             <br/>
-                            In my free time, I like <LinksText onClick={(e) => {
+                            In my free time, I enjoy making <LinksText onClick={(e) => {
                             e.preventDefault();
-                            window.location.href='#art';
-                            }}>painting</LinksText> and <LinksText onClick={(e) => {
+                            window.location.href='art';
+                            }}>art</LinksText> and <LinksText onClick={(e) => {
                             e.preventDefault();
-                            window.location.href='#photo';
+                            window.location.href='photo';
                             }}>photography</LinksText>.
                         </AboutText>
                         <IconContainer>

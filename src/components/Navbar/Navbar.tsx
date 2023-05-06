@@ -12,26 +12,31 @@ import {
 export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
+
     const changeNavbarColor = () =>{
-       if(window.scrollY >= 300 && window.scrollY <= 1000){
-         setColorchange(true);
-         setAux(1);
-       }
-       else if(window.scrollY >= 1000 && window.scrollY <= 1700){
-        setColorchange(true);
-        setAux(2);
-      }
-      else if(window.scrollY >= 1700 && window.scrollY <= 2400){
-        setColorchange(true);
-        setAux(3);
-      }
-      else if(window.scrollY >= 2400 && window.scrollY <= 3000){
-        setColorchange(true);
-        setAux(4);
-      }
+        if (window.location.pathname.includes('/art')) {
+            setColorchange(false);
+        }
+        else if(window.scrollY >= 300 && window.scrollY <= 1000){
+            setColorchange(true);
+            setAux(1);
+        }
+        else if(window.scrollY >= 1000 && window.scrollY <= 1700){
+            setColorchange(true);
+            setAux(2);
+        }
+        else if(window.scrollY >= 1700 && window.scrollY <= 2400){
+            setColorchange(true);
+            setAux(3);
+        }
+        else if(window.scrollY >= 2400 && window.scrollY <= 3000){
+            setColorchange(true);
+            setAux(4);
+        }
         else{
             setColorchange(false);
         }
+        
   };
   window.addEventListener('scroll', changeNavbarColor);
   
