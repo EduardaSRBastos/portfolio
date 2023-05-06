@@ -66,8 +66,7 @@ export const ProjectTextContainer = styled.div`
   width: 42.5vh;
   height: 28.2vh;
   position: absolute;
-  font-size: 2.8vh;
-  padding-top: 28%;
+  padding-top: 22%;
   top: 0%;
   text-align: center;
   width: 100%;
@@ -81,11 +80,22 @@ export const ProjectTextContainer = styled.div`
 `;
 
 export const ProjectText = styled(Text)`
+  font-size: 3.5vh;
   text-align: center;
   width: 100%;
   cursor: default;
   color: white;
 `;
+
+export const ProjectDescription = styled(Text)`
+font-size: 2vh;
+  text-align: center;
+  width: 100%;
+  cursor: default;
+  color: #fff0a3;
+  margin-top: -2%;
+`;
+
 
 export const ProjectButton = styled(Button)`
   text-align: center;

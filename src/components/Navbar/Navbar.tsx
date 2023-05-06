@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LogoE from "../../Files/LogoE.png";
+
 import {
     NavbarContainer,
     LogoContainer,
@@ -12,6 +13,17 @@ import {
 export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
+
+    const handleDownload = () => {
+        //analytics.trackEvent('Download', 'CV', 'PDF');
+        const url = '../../Files/EduardaBastosCV.pdf';
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
 
     const changeNavbarColor = () =>{
         if (window.location.pathname.includes('/art')) {
