@@ -16,7 +16,7 @@ export default function NotFound() {
       const mouseX = event.clientX - imageRect.left;
       const mouseY = event.clientY - imageRect.top;
     
-      if (mouseX > 60 && mouseX < 160 && mouseY > 210 && mouseY < 320) {
+      if (mouseX > 70 && mouseX < 200 && mouseY > 260 && mouseY < 400) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -29,7 +29,7 @@ export default function NotFound() {
       const mouseX = event.clientX - imageRect.left;
       const mouseY = event.clientY - imageRect.top;
     
-      if (mouseX > 60 && mouseX < 160 && mouseY > 210 && mouseY < 320) {
+      if (mouseX > 70 && mouseX < 200 && mouseY > 260 && mouseY < 400) {
         setIsClicked(!isClicked);
         if (image.src === window.location.origin + Cat404Closed) {
           const audio = new Audio(catMeow);
@@ -48,7 +48,7 @@ export default function NotFound() {
                     <TextNotFound>Page Not Found</TextNotFound>
                     <TextOooops>Oooops! Looks like the cat pulled the plug again.</TextOooops>
                     <TextDoesntExist>(The page you are looking for doesn't exist.)</TextDoesntExist>
-                    <LinkButton reloadDocument to='/'>
+                    <LinkButton reloadDocument to='/portfolio/'>
                         <ButtonHome>Back to Home</ButtonHome>
                     </LinkButton>
                     

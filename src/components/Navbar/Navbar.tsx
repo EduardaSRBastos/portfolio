@@ -21,7 +21,7 @@ export default function Navbar() {
 
     const changeNavbarColor = () =>{
         if (window.innerWidth >= 768) {
-            if (window.location.pathname.includes('/art')) {
+            if (window.location.pathname.includes('portfolio/art')) {
                 setColorchange(false);
             }
             else if(window.scrollY >= 500 && window.scrollY <= 1500){
@@ -52,7 +52,7 @@ export default function Navbar() {
         <NavbarContainer>
             <LogoContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='/#';
+                    window.location.href='/portfolio/#';
                     }}>  
                     <Logo src={LogoE} alt='Logo'/>
             </LogoContainer>
@@ -60,7 +60,7 @@ export default function Navbar() {
             <Buttons>
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='/#about';
+                    window.location.href='/portfolio/#about';
                     }}>  
                     <Button className={(colorChange && aux === 1) ? 'navbar colorChange' : 'navbar'}>
                         ABOUT ME
@@ -69,7 +69,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='/#skills';
+                    window.location.href='/portfolio/#skills';
                     }}>
                     <Button className={(colorChange && aux === 2) ? 'navbar colorChange' : 'navbar'}>
                         SKILLS
@@ -78,7 +78,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='/#projects';
+                    window.location.href='/portfolio/#projects';
                     }}>
                     <Button className={(colorChange && aux === 3) ? 'navbar colorChange' : 'navbar'}>
                         PROJECTS
@@ -87,7 +87,7 @@ export default function Navbar() {
 
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='/#contact';
+                    window.location.href='/portfolio/#contact';
                     }}>  
                     <Button className={(colorChange && aux === 4) ? 'navbar colorChange' : 'navbar'}>
                         CONTACT
