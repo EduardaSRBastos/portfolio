@@ -10,24 +10,13 @@ import Art from "./pages/Art/Art";
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-const handleLoading = () => {
-  const startTimer = setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-      return () => clearTimeout(startTimer);
-}
-
-useEffect(()=>{
-  
-  if(localStorage.getItem("LoadingPage") === "false")
-  {
-    setIsLoading(false);
-  } else{
-    localStorage.setItem("LoadingPage", JSON.stringify(isLoading));
-    window.addEventListener("load",handleLoading);
-    return () => window.removeEventListener("load",handleLoading);
-  }
-},[isLoading])
+  useEffect(() => {
+    const startTimer = setTimeout(() => {
+      setIsLoading(false);
+      localStorage.setItem("LoadingPage", "false");
+    }, 1000);
+    return () => clearTimeout(startTimer);
+  }, []);
 
   return (
     <ChakraProvider>

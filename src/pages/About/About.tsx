@@ -52,22 +52,22 @@ export default function About() {
                         <IconContainer>
                             <Tooltip hasArrow label="GitHub"  openDelay={150} bg="black">
                                 <Link href="https://github.com/EduardaSRBastos" target={"_blank"} m="40px 30px">
-                                    <Icon as={BsGithub} _hover={{color: "black", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                    <Icon as={BsGithub} _hover={{color: "black", transform: "scale(1.2)"}} transition="0.4s" maxW=" 160%"/>
                                 </Link>
                             </Tooltip>
                             <Tooltip hasArrow label="LinkedIn"  openDelay={150} bg="#0A66C2">
                                 <Link href="https://www.linkedin.com/in/eduardabastos/" target={"_blank"} m="40px 30px">
-                                    <Icon as={BsLinkedin} _hover={{color: "#0A66C2", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                    <Icon as={BsLinkedin} _hover={{color: "#0A66C2", transform: "scale(1.2)"}} transition="0.4s" maxW=" 160%"/>
                                 </Link>
                             </Tooltip>
                             <Tooltip hasArrow label="Mail"  openDelay={150} bg="#c71610">
                                 <Link href="mailto:eduardasofia2000@gmail.com" target={"_blank"} m="40px 30px">
-                                    <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                    <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 160%"/>
                                 </Link>
                             </Tooltip>
                             <Tooltip hasArrow label="Resume"  openDelay={150} bg="#4940f8">
                                 <Link href="./EduardaBastosCV.pdf" download = "EduardaResume.pdf" target={"_blank"} m="40px 30px">
-                                    <Icon as={BsFileEarmarkPersonFill} _hover={{color: "#4940f8", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
+                                    <Icon as={BsFileEarmarkPersonFill} _hover={{color: "#4940f8", transform: "scale(1.2)"}} transition="0.4s" maxW=" 160%"/>
                                 </Link>
                             </Tooltip>
                         </IconContainer>

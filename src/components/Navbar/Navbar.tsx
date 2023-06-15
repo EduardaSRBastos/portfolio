@@ -1,5 +1,8 @@
+import { Icon, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import LogoE from "../../Files/LogoE.png";
+import SidePanel from "../SidePanel/SidePanel";
+import { BiMenuAltRight } from 'react-icons/bi';
 
 import {
     NavbarContainer,
@@ -13,45 +16,38 @@ import {
 export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
-
-    const handleDownload = () => {
-        //analytics.trackEvent('Download', 'CV', 'PDF');
-        const url = '../../Files/EduardaBastosCV.pdf';
-        const link = document.createElement('a');
-        link.href = url;
-        link.target = '_blank';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     const changeNavbarColor = () =>{
-        if (window.location.pathname.includes('/art')) {
-            setColorchange(false);
+        if (window.innerWidth >= 768) {
+            if (window.location.pathname.includes('/art')) {
+                setColorchange(false);
+            }
+            else if(window.scrollY >= 500 && window.scrollY <= 1500){
+                setColorchange(true);
+                setAux(1);
+            }
+            else if(window.scrollY >= 1500 && window.scrollY <= 2400){
+                setColorchange(true);
+                setAux(2);
+            }
+            else if(window.scrollY >= 2400 && window.scrollY <= 3300){
+                setColorchange(true);
+                setAux(3);
+            }
+            else if(window.scrollY >= 3300 && window.scrollY <= 4000){
+                setColorchange(true);
+                setAux(4);
+            }
+            else{
+                setColorchange(false);
+            }
         }
-        else if(window.scrollY >= 300 && window.scrollY <= 1000){
-            setColorchange(true);
-            setAux(1);
-        }
-        else if(window.scrollY >= 1000 && window.scrollY <= 1700){
-            setColorchange(true);
-            setAux(2);
-        }
-        else if(window.scrollY >= 1700 && window.scrollY <= 2400){
-            setColorchange(true);
-            setAux(3);
-        }
-        else if(window.scrollY >= 2400 && window.scrollY <= 3000){
-            setColorchange(true);
-            setAux(4);
-        }
-        else{
-            setColorchange(false);
-        }
-        
-  };
-  window.addEventListener('scroll', changeNavbarColor);
+    };   
   
+  window.addEventListener('scroll', changeNavbarColor);
+
     return (
         <NavbarContainer>
             <LogoContainer onClick={(e) => {
@@ -60,6 +56,7 @@ export default function Navbar() {
                     }}>  
                     <Logo src={LogoE} alt='Logo'/>
             </LogoContainer>
+            {!isMobile ? (
             <Buttons>
                 <ButtonContainer onClick={(e) => {
                     e.preventDefault();
@@ -97,6 +94,16 @@ export default function Navbar() {
                     </Button>
                 </ButtonContainer>
             </Buttons>
+             ): (
+                 <Buttons>
+                    <ButtonContainer>
+                        <Button onClick={onOpen}>
+                            <Icon as={BiMenuAltRight} boxSize="10" position="absolute" right="0" top="0" bottom="0" m="auto" />
+                        </Button>
+                    </ButtonContainer>
+                    <SidePanel isOpen={isOpen} onClose={onClose} />
+                </Buttons>
+             )}
         </NavbarContainer>
     )
   }

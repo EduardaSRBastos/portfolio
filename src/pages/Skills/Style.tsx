@@ -5,6 +5,10 @@ export const Container = styled.div`
   padding-top: 17.5vh;
   height: 100vh;
   background-color: #34353A;
+
+  @media only screen and (max-width: 768px) {
+    height: 190vh;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -19,12 +23,20 @@ export const Line = styled(Box)`
   width: 6vh;
   margin-right: 2.9vh;
   box-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    width: 4vh;
+  }
 `;
 
 export const Title = styled(Text)`
   font-size: 4.50vh;
   color: #FFDA18;
   text-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 4vh;
+  }
 `;
 
 export const ItemsContainer = styled.div`
@@ -36,12 +48,22 @@ export const ItemsContainer = styled.div`
   padding-bottom: 7vh;
   width: 80%;
   min-width: 134vh;
+
+  @media only screen and (max-width: 768px) {
+    min-width: 85%;
+    margin: 5vh 4vh;
+    height: 15%;
+  }
 `;
 
 
 export const IconsContainer = styled.div`
   display: flex; 
   margin: -4.3vh 2.7vh 2.8vh -2.8vh;
+  
+  @media only screen and (max-width: 768px) {
+    margin: -4.3vh 2.7vh 2.8vh -1.5vh;
+  }
 `;
 
 export const IconContainer = styled.div`
