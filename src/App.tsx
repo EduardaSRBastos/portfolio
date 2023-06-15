@@ -23,11 +23,12 @@ const App = () => {
       <BrowserRouter>
       {!isLoading ? (
         <Routes>
-          <Route path="/portfolio/" element={<Layout />} />
-          <Route path="/portfolio/*" element={<Navigate replace to="/404" />} />
-          <Route path="/portfolio//404" element={<NotFound />} />
-          <Route path="/portfolio//art" element={<Art />} />
+          <Route path="/portfolio" element={<Layout />} />
+          <Route path="/portfolio/*" element={<Navigate replace to="/portfolio/404" />} />
+          <Route path="/portfolio/404" element={<NotFound />} />
+          <Route path="/portfolio/art" element={<Art />} />
         </Routes>
+      
       ): (
         <LoadingScreen />
       )}
