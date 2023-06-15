@@ -15,7 +15,7 @@ const Layout = () => {
     const [is404, setIs404] = useState(false);
     
     useEffect(()=> {
-        if(window.location.pathname ==="/404") {
+        if(window.location.pathname ==="/portfolio/404") {
             setIs404(true);
         } else{
             setIs404(false);
