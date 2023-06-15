@@ -1,7 +1,7 @@
-# My Portfolio Website - Eduarda's Portfolio (WIP)
+# My Portfolio Website - Eduarda's Portfolio
 
 This is my personal portfolio website, where I showcase my skills, projects, and experience as a web developer.  
-The website is built using HTML, CSS, and JavaScript, and it is hosted on GitHub Pages at https://github.com/EduardaSRBastos/portfolio/.
+The website is built using HTML, CSS, and JavaScript, and it is hosted on GitHub Pages at [Eduarda's Portfolio](https://eduardasrbastos.github.io/portfolio/).
 
 ## Table of Contents
 
