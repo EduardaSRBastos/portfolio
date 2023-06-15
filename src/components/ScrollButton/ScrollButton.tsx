@@ -1,32 +1,39 @@
-import React, {useEffect, useState} from 'react';
-import {IoIosArrowUp} from 'react-icons/io';
-import {
-   ButtonIcon,
-} from "./Style";
+import React, { useEffect, useState } from 'react';
+import { IoIosArrowUp } from 'react-icons/io';
+import { ButtonIcon } from './Style';
 
 export default function ScrollButton() {
-const [isTopButtonVisible, setIsTopButtonVisible] = useState(false);
+  const [isTopButtonVisible, setIsTopButtonVisible] = useState(false);
 
-useEffect(() => {
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            setIsTopButtonVisible(true);
-        } else {
-            setIsTopButtonVisible(false);
-        }
-    });
-}, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolledToTop = window.scrollY <= 300;
+      setIsTopButtonVisible(!isScrolledToTop);
+    };
 
-const scrollToTop = () => {
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
     window.scrollTo({
-        top: 0,
-        behavior: "auto",
+      top: 0,
+      behavior: 'auto',
     });
-};
+  };
 
-return (
+  return (
     <>
-   <ButtonIcon as={IoIosArrowUp} onClick={scrollToTop} className={`${isTopButtonVisible ? 'show': null}`}/>
+      <ButtonIcon
+        as={IoIosArrowUp}
+        onClick={scrollToTop}
+        className={`${isTopButtonVisible ? 'show' : ''}`}
+      />
     </>
-);
+  );
 }

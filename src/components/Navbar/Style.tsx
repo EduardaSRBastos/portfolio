@@ -16,6 +16,10 @@ export const LogoContainer = styled.div`
   margin-left: 7vh;
   height: 9.8vh;
 
+  @media only screen and (max-width: 920px) {
+    margin-left: 4vh;
+  }
+
   :hover {
     animation: boing 0.9s both;
   }
@@ -53,10 +57,18 @@ export const Logo = styled(Image)`
 export const Buttons = styled(HStack)`
   position: absolute;
   right: 7vh;
+
+  @media only screen and (max-width: 920px) {
+    right: 1vh;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   padding: 2.8vh;
+
+  @media only screen and (max-width: 920px) {
+    padding: 1.5vh;
+  }
 `;
 
 export const Button = styled.button`
@@ -81,5 +93,9 @@ export const Button = styled.button`
   }
   :hover {
     color: #FFDA18;
+  }
+
+  @media only screen and (max-width: 920px) {
+    font-size: 4vh;
   }
 `;

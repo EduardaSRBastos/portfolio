@@ -1,25 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 
-export const colors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
-
-function getBackgroundColor(i: number, colorsIndex: number) {
-    return `
-            color: ${colors[colorsIndex]};
-        `;
-  }
-  
-  function calculateBackgrounds() {
-    let str = "";
-    let colorsIndex = 0;
-    for (let index = 7; index <= 13; index ++) {
-      str += getBackgroundColor(index, colorsIndex);
-      colorsIndex ++;
-    }
-    return str;
-  }
-  
-
 export const Body = styled.div`
     padding:0;
     margin:0;

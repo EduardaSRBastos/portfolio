@@ -6,19 +6,59 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 export function SpeechBalloon() {
 
 const canvasRef = useRef<HTMLCanvasElement>(null);
-
+const isMobile = window.matchMedia('(max-width: 767px)').matches;
 useEffect(()=> {
     const canvas = canvasRef.current!;
-    canvas.width = 512; 
-    canvas.height = 512;
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true  });
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth - 10, window.innerHeight);
     renderer.setClearColor(0x000000, 0);
+
+    if (!isMobile) {
+        var targetAspectRatio = 16 / 9; 
+      } else {
+        var targetAspectRatio = 1 / 1; 
+      }
+
+    function aspectSize(availableWidth: number, availableHeight: number) {
+    var currentRatio = availableWidth / availableHeight;
+    if (currentRatio > targetAspectRatio) {
+        //the height is the limiting factor
+        return {
+        width: availableHeight * targetAspectRatio,
+        height: availableHeight
+        };
+    } else {
+        // the width is the limiting factor
+        return {
+        width: availableWidth,
+        height: availableWidth / targetAspectRatio
+        };
+    }
+    }
+
+    function onWindowResize() {
+    var newDimensions = aspectSize(window.innerWidth, window.innerHeight);
+    camera.aspect = targetAspectRatio;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(newDimensions.width, newDimensions.height);
+
+    renderer.domElement.style.marginLeft = (newDimensions.width >= window.innerWidth ? 0 : (window.innerWidth - newDimensions.width) / 2) + "px";
+    }
     
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 1000);
+
+    if (!isMobile) {
+        camera.fov = 75;
+      } else {
+        camera.fov = 83;
+      }
+
     camera.position.z = 6;
+    
+    camera.updateProjectionMatrix();
 
     //cube with length, height and depth
     var cubeGeometry = new THREE.BoxGeometry(8.6,4.5,1);
@@ -134,6 +174,13 @@ useEffect(()=> {
     }
 
     update();
+
+    window.addEventListener('resize', onWindowResize, false);
+    onWindowResize(); // call onWindowResize initially to set canvas size
+  
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+    }
 }, []);
 
 return <canvas ref={canvasRef} />
