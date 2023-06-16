@@ -42,7 +42,7 @@ export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
       <Buttons>
         <ButtonContainer onClick={(e) => {
           e.preventDefault();
-          window.location.href = "/#about";
+          window.location.href = "/portfolio/#about";
         }}>
           <Button>
             ABOUT ME
@@ -51,7 +51,7 @@ export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
 
         <ButtonContainer onClick={(e) => {
           e.preventDefault();
-          window.location.href = "/#skills";
+          window.location.href = "/portfolio/#skills";
         }}>
           <Button>
             SKILLS
@@ -60,7 +60,7 @@ export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
 
         <ButtonContainer onClick={(e) => {
           e.preventDefault();
-          window.location.href = "/#projects";
+          window.location.href = "/portfolio/#projects";
         }}>
           <Button>
             PROJECTS
@@ -69,7 +69,7 @@ export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
 
         <ButtonContainer onClick={(e) => {
           e.preventDefault();
-          window.location.href = "/#contact";
+          window.location.href = "/portfolio/#contact";
         }}>
           <Button>
             CONTACT
