@@ -48,7 +48,7 @@ export default function NotFound() {
                     <TextNotFound>Page Not Found</TextNotFound>
                     <TextOooops>Oooops! Looks like the cat pulled the plug again.</TextOooops>
                     <TextDoesntExist>(The page you are looking for doesn't exist.)</TextDoesntExist>
-                    <LinkButton reloadDocument to='/'>
+                    <LinkButton reloadDocument to='/portfolio/'>
                         <ButtonHome>Back to Home</ButtonHome>
                     </LinkButton>
                     
