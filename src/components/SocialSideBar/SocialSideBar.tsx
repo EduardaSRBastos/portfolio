@@ -3,6 +3,7 @@ import { SiDeviantart, SiInstagram, SiLinktree, SiRedbubble } from 'react-icons/
 import {
    Icons, Links, SocialBarContainer,
 } from "./Style";
+import React from 'react';
 
 export default function SocialSideBar() {
 

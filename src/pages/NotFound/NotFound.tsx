@@ -4,6 +4,7 @@ import Cat404Closed from "../../Files/Cat404_ClosedEyes.png"
 import Cat404Glowing from "../../Files/Cat404_Glowing.png"
 import catMeow from "../../Files/CatMeow.wav";
 import { useState } from "react";
+import React from "react";
 
 export default function NotFound() {
 

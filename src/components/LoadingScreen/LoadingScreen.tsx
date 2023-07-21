@@ -1,3 +1,4 @@
+import React from "react";
 import { Body, BoxContainer, Circle, Shadow, LoadingText } from "./Style";
 
 

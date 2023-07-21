@@ -12,6 +12,7 @@ import {
     Button,
     ButtonContainer,
 } from "./Style";
+import React from "react";
 
 export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);

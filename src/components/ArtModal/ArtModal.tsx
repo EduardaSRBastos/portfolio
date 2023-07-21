@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { SiDeviantart, SiInstagram, SiRedbubble } from "react-icons/si";
 
 import IbisPaint from "../../Files/ibis-paint.png";
+import React from "react";
 
 export default function ProjectModal(
   { title, setTitle, 
@@ -31,7 +32,7 @@ export default function ProjectModal(
           <ModalBody mt="5.65vh" mb="5.65vh" display="flex" justifyContent="center" alignItems="center">
             <Box display="flex" w="100%">
               <Box w="100%">
-                  <Image src={`../../Images/Art/${image}.png`} alt={title} w="100%" maxW="100%" objectFit="contain"/>
+                  <Image src={`./Images/Art/${image}.png`} alt={title} maxW="100%" objectFit="contain"/>
               </Box>
               <Box textAlign="justify" w="100%" h="100%" display="grid" m="auto">
                 <Text color="#FFDA18" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
