@@ -21,19 +21,17 @@ const App = () => {
 
   return (
     <ChakraProvider>
-      <BrowserRouter>
       {!isLoading ? (
         <Routes>
-          <Route path="/portfolio/" element={<Layout />} />
-          <Route path="/portfolio/*" element={<Navigate replace to="/portfolio/404" />} />
-          <Route path="/portfolio/404" element={<NotFound />} />
-          <Route path="/portfolio/art" element={<Art />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="/art" element={<Art />} />
         </Routes>
       
       ): (
         <LoadingScreen />
       )}
-      </BrowserRouter>
     </ChakraProvider>
   );
 };
