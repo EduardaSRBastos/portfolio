@@ -81,8 +81,8 @@ export default function ProjectModal(
                 </Slider>
               </Container>
               <Container textAlign="justify" pos="absolute" ml="42.3vh" cursor="default">
-              <Text color="#FFDA18" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
-              <Text color="white" fontSize="2.9vh" whiteSpace="pre-line">{description}</Text>
+              <Text color="#FFDA18" ml="5vh" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
+              <Text color="white" mr="-6vh" fontSize="2.9vh" whiteSpace="pre-line">{description}</Text>
               </Container>
             </Container>
             <Container display="flex" ml="0">
@@ -102,7 +102,7 @@ export default function ProjectModal(
                 </Link>
                 </>)}
               </Container>
-              <Container p="1.2vh 5.8vh" ml="63%" pos="absolute">
+              <Container p="5vh 5.8vh" ml="66%" pos="absolute">
               {(haveWebsite.length>0) &&(<>
                 <Link href={haveWebsite} isExternal>
                   <Button fontSize="2.85vh" bg="#FFDA18" p="3.6vh 2.1vh" _hover={{ filter: "brightness(110%)", transform: "scale(1.1)" }}>View Website</Button>
