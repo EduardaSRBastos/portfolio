@@ -26,7 +26,6 @@ const App = () => {
         <Routes>
           <Route path="/portfolio/" element={<Layout />} />
           
-          <Route path="/portfolio/404" element={<NotFound />} />
           <Route path="/portfolio/art" element={<Art />} />
         </Routes>
       
