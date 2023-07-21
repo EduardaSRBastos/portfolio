@@ -1,6 +1,6 @@
-import { Button, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from 'styled-components';
+import { Button, Image, ImageProps } from '@chakra-ui/react';
 
 export const NotFoundContainer = styled.div`
   height: 100%;
@@ -59,9 +59,13 @@ export const ButtonHome = styled(Button)`
       }
 `;
 
-export const ImageCat = styled(Image)`
-  width: 42%;
-  height: 100%;
-  cursor: ${props => props.isHovering ? 'pointer' : 'default'};
-  object-fit: cover;
-`;
+type StyledImageProps = ImageProps & {
+    isHovering: boolean;
+  };
+  
+  export const ImageCat = styled(Image)<StyledImageProps>`
+    width: 42%;
+    height: 100%;
+    cursor: ${props => (props.isHovering ? 'pointer' : 'default')};
+    object-fit: cover;
+  `;

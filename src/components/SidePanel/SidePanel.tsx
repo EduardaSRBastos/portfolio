@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Icon } from "@chakra-ui/react";
 import { AiOutlineClose } from 'react-icons/ai';
 import { Buttons, Button, ButtonContainer, SidePanelContainer, CloseButton } from "./Style";
+import React from 'react';
 
 export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
   const sidePanelRef = useRef<HTMLDivElement>(null);

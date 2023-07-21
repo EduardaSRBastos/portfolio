@@ -15,6 +15,7 @@ import {
 } from "./Style";
 import { Link, Icon, Tooltip } from "@chakra-ui/react";
 import Oc from "../../Files/Oc.png";
+import React from 'react';
 
 export default function About() {
 
@@ -43,7 +44,7 @@ export default function About() {
                             <br/>
                             In my free time, I enjoy making <LinksText onClick={(e) => {
                             e.preventDefault();
-                            window.location.href='art';
+                            window.location.href='/portfolio/art';
                             }}>art</LinksText> and <LinksText onClick={(e) => {
                             e.preventDefault();
                             window.location.href='photo';

@@ -1,3 +1,4 @@
+import React from "react";
 import { Body, Paw} from "./Style";
 
 export default function CatPawBackground() {

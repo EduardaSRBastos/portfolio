@@ -21,6 +21,7 @@ import {
     ProjectDescription
 } from "./Style";
 import { useState } from "react";
+import React from "react";
 export default function Projects() {
     const projectDisclosure = useDisclosure();
     const [title, setTitle] = useState<string>("");
