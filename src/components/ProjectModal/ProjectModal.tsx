@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "./slick-theme.css";
 import Slider from "react-slick";
+import React from "react";
 
 export default function ProjectModal(
   { title, setTitle, 
