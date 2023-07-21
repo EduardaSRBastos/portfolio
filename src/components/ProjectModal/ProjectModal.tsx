@@ -76,7 +76,7 @@ export default function ProjectModal(
               <Container ml="-45vh" maxW="84vh" pos="absolute">
                 <Slider {...settings}>
                 { image.map( (e:number) => 
-                  <Image  src={`../../Images/${e}`} alt={title} w="76vh" h="42.5vh" maxW="100%" objectFit="contain"/>
+                  <Image  src={`./Images/${e}`} alt={title} w="76vh" h="42.5vh" maxW="100%" objectFit="contain"/>
                   )}
                 </Slider>
               </Container>
