@@ -4,6 +4,7 @@ import Cat404Closed from "../../Files/Cat404_ClosedEyes.png"
 import Cat404Glowing from "../../Files/Cat404_Glowing.png"
 import catMeow from "../../Files/CatMeow.wav";
 import { useState } from "react";
+import React from "react";
 
 export default function NotFound() {
 
@@ -16,7 +17,7 @@ export default function NotFound() {
       const mouseX = event.clientX - imageRect.left;
       const mouseY = event.clientY - imageRect.top;
     
-      if (mouseX > 60 && mouseX < 160 && mouseY > 210 && mouseY < 320) {
+      if (mouseX > 70 && mouseX < 200 && mouseY > 260 && mouseY < 400) {
         setIsHovering(true);
       } else {
         setIsHovering(false);
@@ -29,7 +30,7 @@ export default function NotFound() {
       const mouseX = event.clientX - imageRect.left;
       const mouseY = event.clientY - imageRect.top;
     
-      if (mouseX > 60 && mouseX < 160 && mouseY > 210 && mouseY < 320) {
+      if (mouseX > 70 && mouseX < 200 && mouseY > 260 && mouseY < 400) {
         setIsClicked(!isClicked);
         if (image.src === window.location.origin + Cat404Closed) {
           const audio = new Audio(catMeow);

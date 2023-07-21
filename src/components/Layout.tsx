@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { Home } from "../pages";
 
 import CatPawBackground from "../components/Background/CatPawBackground";
+import React from "react";
 
 const Layout = () => {
     const [is404, setIs404] = useState(false);
