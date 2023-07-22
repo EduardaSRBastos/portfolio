@@ -24,9 +24,9 @@ const App = () => {
       {!isLoading ? (
         <Routes>
           <Route path="/" element={<Layout />} />
-          <Route path="*" element={<Navigate replace to="/404" />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="/art" element={<Art />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
       
       ): (
