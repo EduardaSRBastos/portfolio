@@ -15,8 +15,7 @@ import {
     IconContainer,
 } from "./Style";
 import { FormControl, FormErrorMessage, Icon, Input, Link, Textarea, Tooltip } from "@chakra-ui/react";
-import { useEffect, useState } from 'react';
-import React from 'react';
+import { useState } from 'react';
 
 export default function Contact() {
     const [message, setMessage] = useState<string>("");

@@ -14,7 +14,6 @@ import {
     IconText
 } from "./Style";
 import { Tooltip } from '@chakra-ui/react';
-import React from 'react';
 
 export default function Skills() {
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
