@@ -4,7 +4,6 @@ import {
 } from "./Style";
 
 import { SpeechBalloon } from "../../components/HomeSpeechBalloon/JavaScript/app";
-import React from "react";
 
 export default function Home() {
   
