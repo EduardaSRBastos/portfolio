@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/" element={<Layout />} />
           <Route path="/art" element={<Art />} />
           <Route path="/404" element={<NotFound />} />
-          <Route path="/*" element={<Navigate replace to="/404" />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
       ) : (
         <LoadingScreen />
