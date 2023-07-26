@@ -15,7 +15,6 @@ import {
 } from "./Style";
 import { Link, Icon, Tooltip } from "@chakra-ui/react";
 import Oc from "../../Files/Oc.png";
-import React from 'react';
 
 export default function About() {
 
@@ -42,13 +41,8 @@ export default function About() {
                             It was almost magical to see the page changing with lines of text. In high school, 
                             I decided to take a computer course.<br/>
                             <br/>
-                            In my free time, I enjoy making <LinksText onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href='/portfolio/art';
-                            }}>art</LinksText> and <LinksText onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href='photo';
-                            }}>photography</LinksText>.
+                            In my free time, I enjoy making <LinksText smooth to="/art">art</LinksText> and <LinksText 
+                            smooth to="/photo">photography</LinksText>.
                         </AboutText>
                         <IconContainer>
                             <Tooltip hasArrow label="GitHub"  openDelay={150} bg="black">
