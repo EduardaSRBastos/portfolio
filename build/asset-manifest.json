@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.4f8436e1.css",
+    "main.js": "/portfolio/static/js/main.9c31b386.js",
+    "static/media/Oc.png": "/portfolio/static/media/Oc.4ea319e2a5c3014ff527.png",
+    "static/media/Cat404_Glowing.png": "/portfolio/static/media/Cat404_Glowing.68ef26bc00bb97c2b837.png",
+    "static/media/BeeTheBest.png": "/portfolio/static/media/BeeTheBest.4d69bc036a1d4d62d3e1.png",
+    "static/media/Cat404.png": "/portfolio/static/media/Cat404.ee0843b71ed7f3b339f3.png",
+    "static/media/Cat404_ClosedEyes.png": "/portfolio/static/media/Cat404_ClosedEyes.9080ff1d40b350da7e2d.png",
+    "static/media/Candyland.png": "/portfolio/static/media/Candyland.c36148e6d64ecb369964.png",
+    "static/media/GameShop.png": "/portfolio/static/media/GameShop.869dbb670d15c34b656d.png",
+    "static/media/HMRE3.png": "/portfolio/static/media/HMRE3.a38b8f2c478d4ac8a607.png",
+    "static/media/CatMeow.wav": "/portfolio/static/media/CatMeow.bbce1ed8110889ddf1aa.wav",
+    "static/media/BeeIn.png": "/portfolio/static/media/BeeIn.128f4c491f022f4d39c1.png",
+    "static/media/SBConceptMolds.png": "/portfolio/static/media/SBConceptMolds.f1145ad650e7961adfe5.png",
+    "static/media/LogoE.png": "/portfolio/static/media/LogoE.64d8860d1bbbe4541631.png",
+    "static/media/CatPaw.png": "/portfolio/static/media/CatPaw.b75307869c92497dc9ba.png",
+    "static/media/ibis-paint.png": "/portfolio/static/media/ibis-paint.b9daca382c912a5f5337.png",
+    "index.html": "/portfolio/index.html",
+    "main.4f8436e1.css.map": "/portfolio/static/css/main.4f8436e1.css.map",
+    "main.9c31b386.js.map": "/portfolio/static/js/main.9c31b386.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f8436e1.css",
+    "static/js/main.9c31b386.js"
+  ]
+}
