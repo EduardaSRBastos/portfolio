@@ -1,5 +1,5 @@
 import { Icon, useDisclosure } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LogoE from "../../Files/LogoE.png";
 import SidePanel from "../SidePanel/SidePanel";
 import { BiMenuAltRight } from 'react-icons/bi';
@@ -12,19 +12,29 @@ import {
     Button,
     ButtonContainer,
 } from "./Style";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default function Navbar() {
     const [colorChange, setColorchange] = useState(false);
     var [aux, setAux] = useState<number>(0);
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const [isLayoutPage, setIsLayoutPage] = useState(true);
 
+    useEffect(() => {
+        if (window.location.hash.includes('/art')) {
+          setColorchange(false);
+          setIsLayoutPage(false);
+          window.scrollTo({
+            top: 0,
+            behavior: 'auto',
+          });
+        }
+      }, []);
+    
     const changeNavbarColor = () =>{
         if (window.innerWidth >= 768) {
-            if (window.location.pathname.includes('/portfolio/art')) {
-                setColorchange(false);
-            }
-            else if(window.scrollY >= 500 && window.scrollY <= 1500){
+            if(window.scrollY >= 500 && window.scrollY <= 1500){
                 setColorchange(true);
                 setAux(1);
             }
@@ -48,62 +58,65 @@ export default function Navbar() {
   
   window.addEventListener('scroll', changeNavbarColor);
 
-    return (
-        <NavbarContainer>
-            <LogoContainer onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href='/portfolio/#';
-                    }}>  
-                    <Logo src={LogoE} alt='Logo'/>
-            </LogoContainer>
-            {!isMobile ? (
-            <Buttons>
-                <ButtonContainer onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href='/portfolio/#about';
-                    }}>  
-                    <Button className={(colorChange && aux === 1) ? 'navbar colorChange' : 'navbar'}>
-                        ABOUT ME
-                    </Button>
-                </ButtonContainer>
-
-                <ButtonContainer onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href='/portfolio/#skills';
-                    }}>
-                    <Button className={(colorChange && aux === 2) ? 'navbar colorChange' : 'navbar'}>
-                        SKILLS
-                    </Button>
-                </ButtonContainer>
-
-                <ButtonContainer onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href='/portfolio/#projects';
-                    }}>
-                    <Button className={(colorChange && aux === 3) ? 'navbar colorChange' : 'navbar'}>
-                        PROJECTS
-                    </Button>
-                </ButtonContainer>
-
-                <ButtonContainer onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href='/portfolio/#contact';
-                    }}>  
-                    <Button className={(colorChange && aux === 4) ? 'navbar colorChange' : 'navbar'}>
-                        CONTACT
-                    </Button>
-                </ButtonContainer>
-            </Buttons>
-             ): (
-                 <Buttons>
-                    <ButtonContainer>
-                        <Button onClick={onOpen}>
-                            <Icon as={BiMenuAltRight} boxSize="10" position="absolute" right="0" top="0" bottom="0" m="auto" />
-                        </Button>
-                    </ButtonContainer>
-                    <SidePanel isOpen={isOpen} onClose={onClose} />
-                </Buttons>
-             )}
-        </NavbarContainer>
-    )
-  }
+  return (
+    <NavbarContainer>
+      {!isLayoutPage ? (
+        <LogoContainer>
+          <Link smooth to="/">
+            <Logo src={LogoE} alt='Logo' />
+          </Link>
+        </LogoContainer>
+      ) : (
+        <Link smooth to="#">
+          <LogoContainer>
+            <Logo src={LogoE} alt='Logo' />
+          </LogoContainer>
+        </Link>
+      )}
+  
+      {isLayoutPage && !isMobile && (
+        <Buttons>
+          <ButtonContainer>
+            <Link smooth to="#about">
+              <Button className={colorChange && aux === 1 ? 'navbar colorChange' : 'navbar'}>
+                ABOUT ME
+              </Button>
+            </Link>
+          </ButtonContainer>
+          <ButtonContainer>
+            <Link smooth to="#skills">
+              <Button className={colorChange && aux === 2 ? 'navbar colorChange' : 'navbar'}>
+                SKILLS
+              </Button>
+            </Link>
+          </ButtonContainer>
+          <ButtonContainer>
+            <Link smooth to="#projects">
+              <Button className={colorChange && aux === 3 ? 'navbar colorChange' : 'navbar'}>
+                PROJECTS
+              </Button>
+            </Link>
+          </ButtonContainer>
+          <ButtonContainer>
+            <Link smooth to="#contact">
+              <Button className={colorChange && aux === 4 ? 'navbar colorChange' : 'navbar'}>
+                CONTACT
+              </Button>
+            </Link>
+          </ButtonContainer>
+        </Buttons>
+      )}
+  
+      {isMobile && (
+        <Buttons>
+          <ButtonContainer>
+            <Button onClick={onOpen}>
+              <Icon as={BiMenuAltRight} boxSize="10" position="absolute" right="0" top="0" bottom="0" m="auto" />
+            </Button>
+          </ButtonContainer>
+          <SidePanel isOpen={isOpen} onClose={onClose} />
+        </Buttons>
+      )}
+    </NavbarContainer>
+  );
+}  

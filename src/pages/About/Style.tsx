@@ -1,4 +1,5 @@
 import { Box, Text, Image } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -96,7 +97,7 @@ export const YellowText = styled.span`
   font-size: 3.8vh;
 `;
 
-export const LinksText = styled.a`
+export const LinksText = styled(HashLink)`
   color: #FFDA18;
   text-decoration: underline;
   cursor: pointer;

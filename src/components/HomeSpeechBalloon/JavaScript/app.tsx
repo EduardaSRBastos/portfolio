@@ -106,7 +106,7 @@ useEffect(()=> {
 
     // Load a font for the text
     const fontLoader = new FontLoader();
-    fontLoader.load( '/Portfolio/Pacifico_Regular.json', function ( font ) {
+    fontLoader.load( 'https://eduardasrbastos.github.io/portfolio/Pacifico_Regular.json', function ( font ) {
         const textGeometry = new TextGeometry( 'Eduarda', {
             font: font,
             size: 0.8,

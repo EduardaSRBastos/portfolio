@@ -1,22 +1,14 @@
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter,
-  createHashRouter,
-  RouterProvider
-} from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
-
-const routes = [
-  {
-    path: "/*",
-    element: <App />,
-  }
-];
+import React from 'react';
 
 ReactDOM.render(
-  <BrowserRouter basename='portfolio'>
+  <React.StrictMode>
+    <HashRouter basename='portfolio'>
       <App />
-  </BrowserRouter>,
+    </HashRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
