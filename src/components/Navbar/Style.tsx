@@ -56,7 +56,7 @@ export const Logo = styled(Image)`
 
 export const Buttons = styled(HStack)`
   position: absolute;
-  right: 7vh;
+  right: 5vh;
 
   @media only screen and (max-width: 920px) {
     right: 1vh;
@@ -64,7 +64,7 @@ export const Buttons = styled(HStack)`
 `;
 
 export const ButtonContainer = styled.div`
-  padding: 2.8vh;
+  padding: 2.3vh;
 
   @media only screen and (max-width: 920px) {
     padding: 1.5vh;
@@ -74,7 +74,7 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
   color: white;
   background-color: transparent;
-  font-size: 4.2vh;
+  font-size: 4vh;
   position: relative;
   :after {
     content: '';
