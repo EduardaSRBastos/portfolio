@@ -1,5 +1,5 @@
 import { Button, Container, Modal, ModalBody, ModalCloseButton, ModalContent, 
-  ModalOverlay, ModalProps, Text, Image, Link } from "@chakra-ui/react";
+  ModalOverlay, ModalProps, Text, Image, Link, Box } from "@chakra-ui/react";
   import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 
@@ -82,18 +82,27 @@ export default function ProjectModal(
               </Container>
               <Container textAlign="justify" pos="absolute" ml="42.3vh" cursor="default">
               <Text color="#FFDA18" ml="5vh" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
-              <Text color="white" mr="-6vh" fontSize="2.9vh" whiteSpace="pre-line">{description}</Text>
+              <Text color="white" mr="-12vh" fontSize="2.9vh" whiteSpace="pre-line">{description}</Text>
               </Container>
             </Container>
             <Container display="flex" ml="0">
               <Container display="flex" w="177vh" mb="1.5vh">
                 <Container display="grid" gridTemplateColumns={`repeat(${column}, 1fr)`} m="auto" p="auto">
-                { technology.map( (e:number) => 
-                  <Button bg={"#" + color[++i]} _hover={{ opacity:"0.7" }} color="white" fontSize="2vh" 
-                  textShadow="0 0 0.14vh #000" m="0.7vh" p="1.2vh" w="fit-content" key={e}>
-                    {e}
-                  </Button>
-                  )}
+                  {technology.map((e: number) => (
+                    <Box key={e} position="relative" display="flex" w="100%">
+                      <Button
+                        bg={"#" + color[++i]}
+                        _hover={{ opacity: "0.7" }}
+                        color="white"
+                        fontSize="2vh"
+                        textShadow="0 0 0.14vh #000"
+                        m="0.7vh 1vh"
+                        p="1.5vh 2vh"
+                      >
+                        {e}
+                      </Button>
+                    </Box>
+                  ))}
                 </Container>
                 {(haveGitRepo.length>0) &&(<>
                 <Link href={haveGitRepo} isExternal m="3.6vh" ml="28vh">
