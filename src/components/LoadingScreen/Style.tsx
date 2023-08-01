@@ -6,7 +6,7 @@ export const Body = styled.div`
     margin:0;
     height: 100vh;
     max-width: 100%;
-    background:radial-gradient(#ffda18, #ffb100);
+    background:radial-gradient(#ffda18, #ffc900);
 `;
 
 export const BoxContainer = styled(Box)`

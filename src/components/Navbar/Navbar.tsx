@@ -32,30 +32,29 @@ export default function Navbar() {
         }
       }, []);
     
-      const changeNavbarColor = () => {
+    const changeNavbarColor = () =>{
         if (window.innerWidth >= 768) {
-          const viewportHeight = window.innerHeight;
-          const scrollPositions = [
-            0.8 * viewportHeight,
-            1.8 * viewportHeight,
-            2.7 * viewportHeight,
-            3.7 * viewportHeight,
-            4.4 * viewportHeight,
-          ];
-      
-          const currentScrollY = window.scrollY;
-      
-          for (let i = 0; i < scrollPositions.length; i++) {
-            if (currentScrollY >= scrollPositions[i] && currentScrollY <= scrollPositions[i + 1]) {
-              setColorchange(true);
-              setAux(i + 1);
-              return;
+            if(window.scrollY >= 500 && window.scrollY <= 1500){
+                setColorchange(true);
+                setAux(1);
             }
-          }
-      
-          setColorchange(false);
+            else if(window.scrollY >= 1500 && window.scrollY <= 2400){
+                setColorchange(true);
+                setAux(2);
+            }
+            else if(window.scrollY >= 2400 && window.scrollY <= 3300){
+                setColorchange(true);
+                setAux(3);
+            }
+            else if(window.scrollY >= 3300 && window.scrollY <= 4000){
+                setColorchange(true);
+                setAux(4);
+            }
+            else{
+                setColorchange(false);
+            }
         }
-      };       
+    };   
   
   window.addEventListener('scroll', changeNavbarColor);
 
