@@ -10,11 +10,18 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const startTimer = setTimeout(() => {
+    // Check if the "LoadingPage" key exists in localStorage and its value is "false"
+    const loadingPageValue = localStorage.getItem("LoadingPage");
+    if (loadingPageValue === "false") {
       setIsLoading(false);
-      localStorage.setItem("LoadingPage", "false");
-    }, 1000);
-    return () => clearTimeout(startTimer);
+    } else {
+      // If not found in localStorage or the value is not "false", show the loading screen
+      const startTimer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem("LoadingPage", "false");
+      }, 2500);
+      return () => clearTimeout(startTimer);
+    }
   }, []);
 
   return (
