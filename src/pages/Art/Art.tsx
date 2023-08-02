@@ -40,7 +40,7 @@ export default function Art() {
                   rel="noopener noreferrer"
                   onMouseOver={(event) => {
                     const target = event.target as HTMLElement;
-                    target.style.color = '#FFDA18';
+                    target.style.color = 'var(--primary-color)';
                   }}
                   onMouseOut={(event) => {
                     const target = event.target as HTMLElement;
@@ -93,7 +93,7 @@ export default function Art() {
                   rel="noopener noreferrer"
                   onMouseOver={(event) => {
                     const target = event.target as HTMLElement;
-                    target.style.color = '#FFDA18';
+                    target.style.color = 'var(--primary-color)';
                   }}
                   onMouseOut={(event) => {
                     const target = event.target as HTMLElement;
@@ -146,7 +146,7 @@ export default function Art() {
                   rel="noopener noreferrer"
                   onMouseOver={(event) => {
                     const target = event.target as HTMLElement;
-                    target.style.color = '#FFDA18';
+                    target.style.color = 'var(--primary-color)';
                   }}
                   onMouseOut={(event) => {
                     const target = event.target as HTMLElement;
@@ -199,7 +199,7 @@ export default function Art() {
                   rel="noopener noreferrer"
                   onMouseOver={(event) => {
                     const target = event.target as HTMLElement;
-                    target.style.color = '#FFDA18';
+                    target.style.color = 'var(--primary-color)';
                   }}
                   onMouseOut={(event) => {
                     const target = event.target as HTMLElement;
@@ -288,7 +288,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -353,7 +353,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -382,7 +382,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -615,7 +615,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -644,7 +644,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -755,7 +755,7 @@ export default function Art() {
                 rel="noopener noreferrer"
                 onMouseOver={(event) => {
                   const target = event.target as HTMLElement;
-                  target.style.color = '#FFDA18';
+                  target.style.color = 'var(--primary-color)';
                 }}
                 onMouseOut={(event) => {
                   const target = event.target as HTMLElement;
@@ -880,19 +880,19 @@ export default function Art() {
           <MenuButtonContainer>
             <MenuButton
               onClick={toggleShowAll}
-              style={{ backgroundColor: showAll ? "#FFDA18" : "white" }}
+              style={{ backgroundColor: showAll ? "var(--primary-color)" : "white" }}
             >
               All
             </MenuButton>
             <MenuButton
               onClick={toggleShowWallpapers}
-              style={{ backgroundColor: showWallpapers ? "#FFDA18" : "white" }}
+              style={{ backgroundColor: showWallpapers ? "var(--primary-color)" : "white" }}
             >
               Wallpaper
             </MenuButton>
             <MenuButton
               onClick={toggleShowStickers}
-              style={{ backgroundColor: showStickers ? "#FFDA18" : "white" }}
+              style={{ backgroundColor: showStickers ? "var(--primary-color)" : "white" }}
             >
               Sticker
             </MenuButton>

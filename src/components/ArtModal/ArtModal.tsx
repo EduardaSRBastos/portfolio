@@ -24,9 +24,9 @@ export default function ProjectModal(
   return (
     <>
       <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true} scrollBehavior="inside">
-        <ModalOverlay backdropFilter="blur(0.5vh)"/>
-        <ModalContent bg="#34353A" maxW="160vh" maxH="90vh" minW="140vh" minH="70vh" m="auto">
-          <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"#FFDA18", fontSize:"3.4vh" }}/>
+        <ModalOverlay backdropFilter="blur(0.3vh)"/>
+        <ModalContent bg="#34353A30" backdropFilter={"blur(5vh)"} maxW="169vh" maxH="87vh" m="auto" boxShadow="0 8px 32px 0 #34353A01" border="1px solid #34353A90" borderRadius="5vh">
+          <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"var(--primary-color)", fontSize:"3.4vh" }} m="1%"/>
 
           <ModalBody mt="5.65vh" mb="5.65vh" display="flex" justifyContent="center" alignItems="center">
             <Box display="flex" w="100%">
@@ -34,7 +34,7 @@ export default function ProjectModal(
                   <Image src={`./Images/Art/${image}.png`} alt={title} maxW="100%" objectFit="contain"/>
               </Box>
               <Box textAlign="justify" w="100%" h="100%" display="grid" m="auto">
-                <Text color="#FFDA18" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
+                <Text color="var(--primary-color)" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
                 <Text color="white" fontSize="2.9vh" ml="20%">
                   {description}
                 </Text>

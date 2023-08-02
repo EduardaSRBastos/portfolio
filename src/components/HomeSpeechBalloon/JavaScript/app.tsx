@@ -49,10 +49,10 @@ useEffect(()=> {
     }
     
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 1000);
+    var camera = new THREE.PerspectiveCamera(80, window.innerWidth/window.innerHeight, 1, 1000);
 
     if (!isMobile) {
-        camera.fov = 75;
+        camera.fov = 80;
       } else {
         camera.fov = 83;
       }

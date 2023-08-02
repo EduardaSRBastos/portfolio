@@ -10,17 +10,18 @@ export const SocialBarContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 0 3vh 3vh 0;
-    width: 3.3%;
-    height: 32%;
+    width: 2.5%;
+    height: 25%;
     transition: all 0.5s ease;
     :hover {
-        width: 3.8%;
+        width: 3%;
+        height: 30%;
     }
 `;
 
 export const Links = styled(Link)`
     display: block;
-    margin: 20% 0;
+    margin: 25% 0;
     width: 100%;
     padding-top: 15%;
     height: 18%;
@@ -40,7 +41,7 @@ export const Links = styled(Link)`
         text-align: center;
         font-size: 70%;
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease-in-out;
     }
 
     :hover:before { 

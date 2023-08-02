@@ -11,7 +11,7 @@ export default function Home() {
         <div id=''>
             <HomeContainer>
                 <TextContainer style={{zIndex:1}}>
-                <SpeechBalloon/>
+                    <SpeechBalloon/>
                 </TextContainer>
             </HomeContainer>
         </div>

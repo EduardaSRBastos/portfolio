@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 100vh;
+  height: 90vh;
   background-color: #34353A;
 
   @media only screen and (max-width: 768px) {
@@ -18,10 +18,10 @@ export const TitleContainer = styled.div`
 `;
 
 export const Line = styled(Box)`
-  background: #FFDA18;
+  background: var(--primary-color);
   height: 0.2vh;
-  width: 6vh;
-  margin-right: 2.9vh;
+  width: 4vh;
+  margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
 
   @media only screen and (max-width: 768px) {
@@ -30,12 +30,12 @@ export const Line = styled(Box)`
 `;
 
 export const Title = styled(Text)`
-  font-size: 4.50vh;
-  color: #FFDA18;
+  font-size: 3.6vh;
+  color: var(--primary-color);
   text-shadow: 0 0 0.7vh black;
 
   @media only screen and (max-width: 768px) {
-    font-size: 4vh;
+    font-size: 3vh;
   }
 `;
 
@@ -77,18 +77,18 @@ export const IconContainer = styled.div`
   color: white;
   transition: all 0.5s ease-in-out;
   :hover {
-    color: #FFDA18;
+    color: var(--primary-color);
     transform: scale(1.2);
   }
 `;
 
 export const Icons = styled(Icon)`
-  font-size: 8.4vh;
+  font-size: 6vh;
   margin: 12.7vh 8vh 1.4vh;
   max-width: 100%;
 `;
 
 export const IconText = styled(Text)`
-  font-size: 2.8vh;
+  font-size: 2.2vh;
   cursor: default;
 `;

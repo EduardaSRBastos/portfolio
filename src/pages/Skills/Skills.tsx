@@ -1,4 +1,4 @@
-import { SiCsharp, SiMicrosoftsqlserver, SiVisualstudiocode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFigma } from 'react-icons/si';
+import { SiCsharp, SiMicrosoftsqlserver, SiVisualstudiocode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFigma, SiAngular } from 'react-icons/si';
 import { TfiLayoutTabWindow } from 'react-icons/tfi';
 import { BsGithub } from 'react-icons/bs';
 
@@ -62,6 +62,12 @@ export default function Skills() {
                             <IconText>GitHub</IconText>
                         </IconContainer>
                         </Tooltip>
+                        <Tooltip hasArrow label="Level 4" openDelay={300}>
+                        <IconContainer>
+                            <Icons as={SiFigma}/>
+                            <IconText>Figma</IconText>
+                        </IconContainer>
+                        </Tooltip>
                     </IconsContainer>
                     <IconsContainer>
                         <Tooltip hasArrow label="Level 4" openDelay={300}>
@@ -99,10 +105,10 @@ export default function Skills() {
                         </IconContainer>
                         </Tooltip>
 
-                        <Tooltip hasArrow label="Level 4" openDelay={300}>
+                        <Tooltip hasArrow label="Level 3" openDelay={300}>
                         <IconContainer>
-                            <Icons as={SiFigma}/>
-                            <IconText>Figma</IconText>
+                            <Icons as={SiAngular}/>
+                            <IconText>Angular</IconText>
                         </IconContainer>
                         </Tooltip>
                     </IconsContainer>

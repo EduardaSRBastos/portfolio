@@ -10,13 +10,13 @@ export const HomeContainer = styled(HStack)`
   max-width: 100%;
   
   @media only screen and (min-width: 768px) {
-    min-height: 100vh;
+    min-height: 90vh;
     margin-top: 8vh;
     
   }
 `;
 
 export const TextContainer = styled.div`
-  margin-top: 4vh;
+  margin-top: 5vh;
   cursor: default;
 `;

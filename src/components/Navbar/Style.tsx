@@ -2,7 +2,7 @@ import { HStack, Image } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const NavbarContainer = styled(HStack)`
-  height: 10vh;
+  height: 6.5vh;
   background-color: #2D2E32;
   box-shadow: 0px 0.4vh 1.4vh 0 #00000058;
   border-bottom: 0.14vh solid black; 
@@ -13,11 +13,11 @@ export const NavbarContainer = styled(HStack)`
 `;
 
 export const LogoContainer = styled.div`
-  margin-left: 7vh;
-  height: 9.8vh;
+  margin-left: 10vh;
+  height: 6vh;
 
   @media only screen and (max-width: 920px) {
-    margin-left: 4vh;
+    margin-left: 7vh;
   }
 
   :hover {
@@ -56,25 +56,25 @@ export const Logo = styled(Image)`
 
 export const Buttons = styled(HStack)`
   position: absolute;
-  right: 5vh;
+  right: 10vh;
 
   @media only screen and (max-width: 920px) {
-    right: 1vh;
+    right: 2vh;
   }
 `;
 
 export const ButtonContainer = styled.div`
-  padding: 2.3vh;
+  padding: 1.5vh;
 
   @media only screen and (max-width: 920px) {
-    padding: 1.5vh;
+    padding: 1vh;
   }
 `;
 
 export const Button = styled.button`
   color: white;
   background-color: transparent;
-  font-size: 4vh;
+  font-size: 2.5vh;
   position: relative;
   :after {
     content: '';
@@ -84,7 +84,7 @@ export const Button = styled.button`
     height: 0.3vh;
     bottom: 0;
     left: 0;
-    background-color: #FFDA18;
+    background-color: var(--primary-color);
     transition: transform 0.25s ease-out;
   }
   :hover:after {
@@ -92,10 +92,10 @@ export const Button = styled.button`
     transform-origin: bottom left;
   }
   :hover {
-    color: #FFDA18;
+    color: var(--primary-color);
   }
 
   @media only screen and (max-width: 920px) {
-    font-size: 4vh;
+    font-size: 2vh;
   }
 `;

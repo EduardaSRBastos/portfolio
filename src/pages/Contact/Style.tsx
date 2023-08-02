@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 100vh;
+  height: 95vh;
   background-color: #34353A;
 `;
 
@@ -14,17 +14,25 @@ export const TitleContainer = styled.div`
 `;
 
 export const Line = styled(Box)`
-  background: #FFDA18;
+  background: var(--primary-color);
   height: 0.2vh;
-  width: 6vh;
-  margin-right: 2.9vh;
+  width: 4vh;
+  margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    width: 4vh;
+  }
 `;
 
 export const Title = styled(Text)`
-  font-size: 4.50vh;
-  color: #FFDA18;
+  font-size: 3.6vh;
+  color: var(--primary-color);
   text-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3vh;
+  }
 `;
 
 export const ItemsContainer = styled.div`
@@ -47,7 +55,7 @@ export const InputText = styled(FormLabel)`
 
 export const EmailButton = styled(Button)`
   font-size: 2.7vh;
-  background: #FFDA18 !important;
+  background: var(--primary-color) !important;
   color: black;
   width: fit-content;
   justify-self: center;
@@ -66,7 +74,7 @@ export const TextContainer = styled.div`
 
 export const Name = styled(Text)`
   font-size: 5.7vh;
-  color: #FFDA18;
+  color: var(--primary-color);
 `;
 
 export const DevText = styled(Text)`
@@ -82,6 +90,6 @@ export const EmailText = styled(Text)`
 export const IconContainer = styled.div`
   display: flex; 
   margin: auto;
-  font-size: 5.6vh;
+  font-size: 4vh;
   color: white;
 `;

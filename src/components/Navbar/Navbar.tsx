@@ -36,11 +36,11 @@ export default function Navbar() {
         if (window.innerWidth >= 768) {
           const viewportHeight = window.innerHeight;
           const scrollPositions = [
-            0.8 * viewportHeight,
-            1.8 * viewportHeight,
-            2.7 * viewportHeight,
-            3.7 * viewportHeight,
-            4.4 * viewportHeight,
+            0.7 * viewportHeight,
+            1.6 * viewportHeight,
+            2.5 * viewportHeight,
+            3.4 * viewportHeight,
+            3.8 * viewportHeight,
           ];
 
           const currentScrollY = window.scrollY;

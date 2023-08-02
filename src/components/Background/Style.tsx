@@ -5,7 +5,7 @@ import CatPaw from "../../Files/CatPaw.png"
 export const Body = styled.div`
     padding:0;
     margin:0;
-    height: 100vh;
+    height: 90vh;
     max-width: 100%;
     overflow: hidden;
     z-index: -1;

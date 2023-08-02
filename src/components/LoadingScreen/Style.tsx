@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const Body = styled.div`
     padding:0;
     margin:0;
-    height: 100vh;
+    height: 90vh;
     max-width: 100%;
-    background:radial-gradient(#ffda18, #ffb100);
+    background:radial-gradient(var(--primary-color), #ffb100);
 `;
 
 export const BoxContainer = styled(Box)`

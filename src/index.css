@@ -1,7 +1,11 @@
+:root {
+  --primary-color: #FFDA18;
+}
+
 html {
   background-color: #34353A;
   overflow-y: scroll;
-  scrollbar-color: #FFDA18 #2D2E32;
+  scrollbar-color: var(--primary-color) #2D2E32;
   scrollbar-width: thin;
   scroll-behavior: smooth;
   max-width: 100%;
@@ -13,7 +17,7 @@ body {
 }
 
 .navbar.colorChange{
-  color: #FFDA18;
+  color: var(--primary-color);
   position: relative;
   background-color: transparent;
   transition: transform 0.5s ease;
@@ -26,13 +30,13 @@ body {
   height: 0.26vh;
   bottom: 0;
   left: 0;
-  background-color: #FFDA18;
+  background-color: var(--primary-color);
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
 ::-webkit-scrollbar {
-  width: 1.5vh;
+  width: 1vh;
 }
 
 ::-webkit-scrollbar-track {
@@ -42,7 +46,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffda18;
+  background: var(--primary-color);
   border-radius: 10px;
   border: 1px solid #000000;
   box-shadow: 0 0 2vh rgba(0, 0, 0, 0.2);
@@ -60,5 +64,5 @@ body {
 
 ::-webkit-scrollbar-track-piece:start {
   background: transparent;
-  margin-top: 10vh;
+  margin-top: 6vh;
 }

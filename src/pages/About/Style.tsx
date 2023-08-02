@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 100vh;
+  height: 90vh;
   background-color: #34353A;
   width: 100%;
   max-width: 100%;
@@ -21,10 +21,10 @@ export const TitleContainer = styled.div`
 `;
 
 export const Line = styled(Box)`
-  background: #FFDA18;
+  background: var(--primary-color);
   height: 0.2vh;
-  width: 6vh;
-  margin-right: 2.9vh;
+  width: 4vh;
+  margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
 
   @media only screen and (max-width: 768px) {
@@ -33,21 +33,21 @@ export const Line = styled(Box)`
 `;
 
 export const Title = styled(Text)`
-  font-size: 4.50vh;
-  color: #FFDA18;
+  font-size: 3.6vh;
+  color: var(--primary-color);
   text-shadow: 0 0 0.7vh black;
 
   @media only screen and (max-width: 768px) {
-    font-size: 4vh;
+    font-size: 3vh;
   }
 `;
 
 export const PictureContainer = styled.div`
   height: 47.8vh;
   border-radius: 30vh;
-  width: 60%;
-  height: 60%;
-  margin: -4.4vh 11.5vh 7vh 5.5vh;
+  width: 50%;
+  height: 50%;
+  margin: 2vh 8vh 7vh 12vh;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
@@ -78,7 +78,7 @@ export const ItemsContainer = styled.div`
 
 export const TextContainer = styled.div`
   display: grid; 
-  margin-right: 11.2vh;
+  margin-right: 16vh;
 
   @media only screen and (max-width: 768px) {
   margin: 0 7vh 0 3vh;
@@ -86,19 +86,19 @@ export const TextContainer = styled.div`
 `;
 
 export const AboutText = styled(Text)`
-  font-size: 3.4vh;
+  font-size: 2.5vh;
   color: #E8E8E8;
   text-align: justify;
-  margin-top: 4.2vh;
+  margin-top: 10vh;
 `;
 
 export const YellowText = styled.span`
-  color: #FFDA18;
-  font-size: 3.8vh;
+  color: var(--primary-color);
+  font-size: 3vh;
 `;
 
 export const LinksText = styled(HashLink)`
-  color: #FFDA18;
+  color: var(--primary-color);
   text-decoration: underline;
   cursor: pointer;
 `;
@@ -106,6 +106,6 @@ export const LinksText = styled(HashLink)`
 export const IconContainer = styled.div`
   display: flex; 
   margin: auto;
-  font-size: 5.6vh;
+  font-size: 4vh;
   color: white;
 `;

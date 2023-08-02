@@ -20,7 +20,7 @@ export const TextContainer = styled.div`
 
 export const Text404 = styled.h1`
     font-size: 25vh;
-    color: #FFDA18;
+    color: var(--primary-color);
     margin-bottom: -8vh;
 `;
 
@@ -48,7 +48,7 @@ export const LinkButton = styled(Link)`
 export const ButtonHome = styled(Button)`
     margin-top: 3vh;
     font-size: 3vh;
-    background: #FFDA18 !important;
+    background: var(--primary-color) !important;
     color: black;
     width: fit-content;
     justify-self: center;

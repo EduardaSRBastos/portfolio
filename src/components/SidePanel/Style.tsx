@@ -29,7 +29,7 @@ export const CloseButton = styled.a`
     font-size: 5vh;
 
     :hover {
-        color: #FFDA18;
+        color: var(--primary-color);
     }
 `;
 
@@ -59,7 +59,7 @@ export const Button = styled.button`
     height: 0.3vh;
     bottom: 0;
     left: 0;
-    background-color: #FFDA18;
+    background-color: var(--primary-color);
     transition: transform 0.25s ease-out;
   }
   :hover:after {
@@ -67,7 +67,7 @@ export const Button = styled.button`
     transform-origin: bottom left;
   }
   :hover {
-    color: #FFDA18;
+    color: var(--primary-color);
   }
 
   @media only screen and (max-width: 920px) {

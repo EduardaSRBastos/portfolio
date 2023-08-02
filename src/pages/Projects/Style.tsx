@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 100vh;
+  height: 90vh;
   background-color: #34353A;
 `;
 
@@ -14,17 +14,25 @@ export const TitleContainer = styled.div`
 `;
 
 export const Line = styled(Box)`
-  background: #FFDA18;
+  background: var(--primary-color);
   height: 0.2vh;
-  width: 6vh;
-  margin-right: 2.9vh;
+  width: 4vh;
+  margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    width: 4vh;
+  }
 `;
 
 export const Title = styled(Text)`
-  font-size: 4.50vh;
-  color: #FFDA18;
+  font-size: 3.6vh;
+  color: var(--primary-color);
   text-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3vh;
+  }
 `;
 
 export const ItemsContainer = styled.div`
@@ -42,17 +50,25 @@ export const ProjectsContainer = styled.div`
 export const ProjectContainer = styled.div`
   margin: 2.8vh;
   position: relative;
-  ::before
-      {
-          content:'';
-          position:absolute;
-          width:100%;
-          height:100%;
-          box-shadow:inset 0px 0px 3px 1px rgba(52,53,58,1);
-      }
   transition: .5s ease-in-out;
   :hover {
     transform: scale(1.1);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.4vh) brightness(0.5);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  :hover::before {
+    opacity: 1;
   }
 `;
 
@@ -66,21 +82,21 @@ export const ProjectTextContainer = styled.div`
   width: 42.5vh;
   height: 28.2vh;
   position: absolute;
+  top: 0;
   padding-top: 22%;
-  top: 0%;
   text-align: center;
   width: 100%;
   opacity: 0;
   transition: .3s ease-in-out;
-  :hover {
+
+  ${ProjectContainer}:hover & {
     opacity: 1;
-    backdrop-filter: blur(0.4vh) brightness(0.5);
     text-shadow: 0 0 0.7vh black;
   }
 `;
 
 export const ProjectText = styled(Text)`
-  font-size: 3.5vh;
+  font-size: 3vh;
   text-align: center;
   width: 100%;
   cursor: default;
@@ -88,7 +104,7 @@ export const ProjectText = styled(Text)`
 `;
 
 export const ProjectDescription = styled(Text)`
-font-size: 2vh;
+  font-size: 2vh;
   text-align: center;
   width: 100%;
   cursor: default;
@@ -96,12 +112,13 @@ font-size: 2vh;
   margin-top: -2%;
 `;
 
-
 export const ProjectButton = styled(Button)`
   text-align: center;
-  background-color: #FFDA18 !important;
+  background-color: var(--primary-color) !important;
   color: black;
   margin-top: 2vh;
+  width: 25%;
+  border-radius: 5vh !important;
   height: 4.3vh !important;
   :hover {
     filter: brightness(110%);

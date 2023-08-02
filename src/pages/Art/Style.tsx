@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 17.5vh;
-  height: 100vh;
+  height: 90vh;
   background-color: #34353A;
 `;
 
@@ -14,17 +14,25 @@ export const TitleContainer = styled.div`
 `;
 
 export const Line = styled(Box)`
-  background: #FFDA18;
+  background: var(--primary-color);
   height: 0.2vh;
-  width: 6vh;
-  margin-right: 2.9vh;
+  width: 4vh;
+  margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    width: 4vh;
+  }
 `;
 
 export const Title = styled(Text)`
-  font-size: 4.50vh;
-  color: #FFDA18;
+  font-size: 3.6vh;
+  color: var(--primary-color);
   text-shadow: 0 0 0.7vh black;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3vh;
+  }
 `;
 
 export const MenuButtonContainer = styled.div`
@@ -36,9 +44,9 @@ export const MenuButtonContainer = styled.div`
 `;
 
 export const MenuButton = styled(Button)`
-flex: 0 0 45%;
+  flex: 0 0 45%;
   color: black;
-  border-radius: 1.5vh !important;
+  border-radius: 2vh !important;
   :hover {
     filter: brightness(110%);
     transform: scale(1.2);
@@ -105,10 +113,12 @@ export const PictureButtonContainer = styled.div`
 `;
 
 export const PictureButton = styled(Button)`
-  background-color: #FFDA18 !important;
+  background-color: var(--primary-color) !important;
   color: black;
   padding: 5%;
   margin-top: 2vh;
+  width: 25%;
+  border-radius: 5vh !important;
   height: 5vh !important;
   :hover {
     filter: brightness(110%);
