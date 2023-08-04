@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 import CatPaw from "../../Files/CatPaw.png"
 

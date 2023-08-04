@@ -44,13 +44,13 @@ export default function Contact() {
                         <FormControl isRequired isInvalid={isInvalid}>
                         <InputText>Email</InputText>
                         <Input type="email" w="400px" h="30px" mb="20px" bg="white" value={email} placeholder="Email" focusBorderColor="black"
-                        onChange={(event) => setEmail(event.target.value)}/>
+                        onChange={(event) => setEmail(event.target.value)} inputMode="email"/>
                         <FormErrorMessage>Email is required.</FormErrorMessage>
                         </FormControl>
 
                         <InputText>Message</InputText>
                         <Textarea w="400px" h="215px" mb="20px" bg="white" value={message} placeholder="Message" focusBorderColor="black"
-                        onChange={(event) => setMessage(event.target.value)}/>
+                        onChange={(event) => setMessage(event.target.value)} spellCheck="true"/>
                         <EmailButton type="submit" onClick={SendEmail}>Send Email</EmailButton>
                     </EmailContainer>
                     <TextContainer>

@@ -16,10 +16,9 @@ import {
 import Navbar from "../../components/Navbar/Navbar";
 import ScrollButton from "../../components/ScrollButton/ScrollButton";
 import { useDisclosure } from "@chakra-ui/react";
-import { Key, useEffect, useState } from "react";
+import { useState } from "react";
 import ArtModal from "../../components/ArtModal/ArtModal";
 import SocialSideBar from "../../components/SocialSideBar/SocialSideBar";
-import React from "react";
 
 export default function Art() {
 
@@ -792,7 +791,7 @@ export default function Art() {
       { src: "./Images/Art/Tiger.png", alt: "Saber-Toothed Tiger Digital Art", name: "Tiger" },
       { src: "./Images/Art/Bluff.png", alt: "Pumpkin Bluffing Sticker Digital Art", name: "Bluff" }, 
       { src: "./Images/Art/Bouquet.png", alt: "Bouquet of Dark Red Roses Sticker Digital Art", name: "Bouquet" }, 
-      { src: "./Images/Art/Bulbasaur Sticker.png", alt: "Bulbasaur Sticker Digital Art", name: "Bulbasaur" }, 
+      { src: "./Images/Art/Bulbasaur Sticker.png", alt: "Bulbasaur Sticker Digital Art", name: "Bulbasaur Sticker" }, 
       { src: "./Images/Art/Candles.png", alt: "Candles on Table Digital Art", name: "Candles" }, 
       { src: "./Images/Art/Magpies.png", alt: "Magpies on Trunk Wallpaper Digital Art", name: "Magpies" }, 
       { src: "./Images/Art/Marinette.png", alt: "Marinette From Miraculous Ladybug Digital Art", name: "Marinette" }, 

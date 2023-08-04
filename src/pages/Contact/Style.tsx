@@ -45,6 +45,7 @@ export const EmailContainer = styled.div`
   margin-left: 21vh;
   margin-top: 4.2vh;
   cursor: default;
+  caret-color: #ffb618;
 `;
 
 export const InputText = styled(FormLabel)`
@@ -70,6 +71,7 @@ export const TextContainer = styled.div`
   display: grid; 
   margin-left: 43vh;
   cursor: default;
+  margin-top: 5vh;
 `;
 
 export const Name = styled(Text)`

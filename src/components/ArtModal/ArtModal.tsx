@@ -29,13 +29,13 @@ export default function ProjectModal(
           <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"var(--primary-color)", fontSize:"3.4vh" }} m="1%"/>
 
           <ModalBody mt="5.65vh" mb="5.65vh" display="flex" justifyContent="center" alignItems="center">
-            <Box display="flex" w="100%">
-              <Box w="100%">
-                  <Image src={`./Images/Art/${image}.png`} alt={title} maxW="100%" objectFit="contain"/>
+            <Box display="flex" w="100%" m="auto">
+              <Box w="90%" display="flex" justifyContent="center">
+                  <Image src={`./Images/Art/${image}.png`} alt={title} maxW="90%" objectFit="contain"/>
               </Box>
               <Box textAlign="justify" w="100%" h="100%" display="grid" m="auto">
-                <Text color="var(--primary-color)" fontSize="4.5vh" mb="2.7vh" mt="-1.5vh" textAlign="center">{title}</Text>
-                <Text color="white" fontSize="2.9vh" ml="20%">
+                <Text color="var(--primary-color)" fontSize="3.5vh" mb="2.7vh" textAlign="center">{title}</Text>
+                <Text color="white" fontSize="2vh" ml="20%">
                   {description}
                 </Text>
                 <Flex justify="center" align="center" mt="5%">

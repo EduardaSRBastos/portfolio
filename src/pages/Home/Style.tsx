@@ -1,4 +1,4 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const HomeContainer = styled(HStack)`
@@ -17,6 +17,5 @@ export const HomeContainer = styled(HStack)`
 `;
 
 export const TextContainer = styled.div`
-  margin-top: 5vh;
   cursor: default;
 `;
