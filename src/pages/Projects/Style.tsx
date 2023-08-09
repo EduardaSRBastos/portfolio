@@ -5,6 +5,10 @@ export const Container = styled.div`
   padding-top: 17.5vh;
   height: 90vh;
   background-color: #34353A;
+  
+  @media only screen and (max-width: 768px) {
+    height: 220vh;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -19,10 +23,6 @@ export const Line = styled(Box)`
   width: 4vh;
   margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
-
-  @media only screen and (max-width: 768px) {
-    width: 4vh;
-  }
 `;
 
 export const Title = styled(Text)`
@@ -39,6 +39,11 @@ export const ItemsContainer = styled.div`
   display: grid; 
   align-items: center;
   margin-top: 2.8vh;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: -5vh;
+    margin-left: 1vh;
+  }
 `;
 
 export const ProjectsContainer = styled.div`

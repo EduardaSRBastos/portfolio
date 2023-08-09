@@ -2,7 +2,7 @@ import { VStack } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const SidePanelContainer = styled.div`
-    height: 50vh;
+    height: 32vh;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -17,15 +17,15 @@ export const SidePanelContainer = styled.div`
     border-bottom-left-radius: 5%;
 
     &.open {
-        width: 30vh;
+      width: 20vh;
     }
 `;
 
 export const CloseButton = styled.a`
     color: white;
     position: absolute;
-    top: 5%;
-    right: 10%;
+    top: 1%;
+    right: 5%;
     font-size: 5vh;
 
     :hover {
@@ -34,31 +34,22 @@ export const CloseButton = styled.a`
 `;
 
 export const Buttons = styled(VStack)`
-  @media only screen and (max-width: 920px) {
-    right: 3vh;
-  }
 `;
 
 export const ButtonContainer = styled.div`
-
-  @media only screen and (max-width: 920px) {
-    padding: 1.5vh;
-  }
+  padding-bottom: 1vh;
 `;
 
 export const Button = styled.button`
   color: white;
   background-color: transparent;
-  font-size: 4.2vh;
+  font-size: 2.5vh;
   position: relative;
   :after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 0.3vh;
-    bottom: 0;
-    left: 0;
     background-color: var(--primary-color);
     transition: transform 0.25s ease-out;
   }
@@ -68,9 +59,5 @@ export const Button = styled.button`
   }
   :hover {
     color: var(--primary-color);
-  }
-
-  @media only screen and (max-width: 920px) {
-    font-size: 4vh;
   }
 `;

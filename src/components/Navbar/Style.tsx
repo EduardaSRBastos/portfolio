@@ -17,7 +17,7 @@ export const LogoContainer = styled.div`
   height: 6vh;
 
   @media only screen and (max-width: 920px) {
-    margin-left: 7vh;
+    margin-left: 3vh;
   }
 
   :hover {

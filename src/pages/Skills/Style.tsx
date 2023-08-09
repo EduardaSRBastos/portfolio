@@ -7,7 +7,7 @@ export const Container = styled.div`
   background-color: #34353A;
 
   @media only screen and (max-width: 768px) {
-    height: 190vh;
+    height: 160vh;
   }
 `;
 
@@ -23,10 +23,6 @@ export const Line = styled(Box)`
   width: 4vh;
   margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
-
-  @media only screen and (max-width: 768px) {
-    width: 4vh;
-  }
 `;
 
 export const Title = styled(Text)`
@@ -50,9 +46,9 @@ export const ItemsContainer = styled.div`
   min-width: 134vh;
 
   @media only screen and (max-width: 768px) {
-    min-width: 85%;
-    margin: 5vh 4vh;
-    height: 15%;
+    min-width: 98%;
+    margin: 4vh;
+    height: 20%;
   }
 `;
 
@@ -62,7 +58,9 @@ export const IconsContainer = styled.div`
   margin: -4.3vh 2.7vh 2.8vh -2.8vh;
   
   @media only screen and (max-width: 768px) {
-    margin: -4.3vh 2.7vh 2.8vh -1.5vh;
+    margin-left: 1vh;
+    margin-bottom: 0;
+    margin-top: -5vh;
   }
 `;
 
@@ -79,6 +77,12 @@ export const IconContainer = styled.div`
   :hover {
     color: var(--primary-color);
     transform: scale(1.2);
+  }
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 `;
 

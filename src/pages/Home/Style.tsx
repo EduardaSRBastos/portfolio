@@ -10,9 +10,7 @@ export const HomeContainer = styled(HStack)`
   max-width: 100%;
   
   @media only screen and (min-width: 768px) {
-    min-height: 90vh;
     margin-top: 8vh;
-    
   }
 `;
 

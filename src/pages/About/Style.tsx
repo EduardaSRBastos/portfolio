@@ -10,7 +10,7 @@ export const Container = styled.div`
   max-width: 100%;
 
   @media only screen and (max-width: 768px) {
-    height: 190vh;
+    height: 135vh;
   }
 `;
 
@@ -26,10 +26,6 @@ export const Line = styled(Box)`
   width: 4vh;
   margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
-
-  @media only screen and (max-width: 768px) {
-    width: 4vh;
-  }
 `;
 
 export const Title = styled(Text)`
@@ -52,7 +48,7 @@ export const PictureContainer = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   @media only screen and (max-width: 768px) {
-    margin: 4vh 11.5vh 0vh 6.5vh;
+    margin: 5vh 0vh 0vh 7vh;
     height: 35vh;
     width: 35vh;
   }
@@ -61,6 +57,7 @@ export const PictureContainer = styled.div`
 export const Picture = styled(Image)`
   transition: transform 0.4s ease-in-out;
   box-shadow: 0 0 200px rgba(255, 255, 255, 0.5);
+  
   ${PictureContainer}:hover & {
     transform: scale(1.15);
   }
@@ -81,7 +78,7 @@ export const TextContainer = styled.div`
   margin-right: 16vh;
 
   @media only screen and (max-width: 768px) {
-  margin: 0 7vh 0 3vh;
+  margin: -5vh -3vh 0 3vh;
   }
 `;
 

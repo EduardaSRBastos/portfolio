@@ -13,8 +13,10 @@ import {
     DevText,
     EmailText,
     IconContainer,
+    EmailInput,
+    MessageText
 } from "./Style";
-import { FormControl, FormErrorMessage, Icon, Input, Link, Textarea, Tooltip } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, Icon, Link, Textarea, Tooltip } from "@chakra-ui/react";
 import { useState } from 'react';
 
 export default function Contact() {
@@ -43,14 +45,14 @@ export default function Contact() {
                     <EmailContainer>
                         <FormControl isRequired isInvalid={isInvalid}>
                         <InputText>Email</InputText>
-                        <Input type="email" w="400px" h="30px" mb="20px" bg="white" value={email} placeholder="Email" focusBorderColor="black"
-                        onChange={(event) => setEmail(event.target.value)} inputMode="email"/>
+                        <EmailInput type="email" value={email} placeholder="Email" focusBorderColor="black"
+                        onChange={(event:any) => setEmail(event.target.value)} inputMode="email"/>
                         <FormErrorMessage>Email is required.</FormErrorMessage>
                         </FormControl>
 
                         <InputText>Message</InputText>
-                        <Textarea w="400px" h="215px" mb="20px" bg="white" value={message} placeholder="Message" focusBorderColor="black"
-                        onChange={(event) => setMessage(event.target.value)} spellCheck="true"/>
+                        <MessageText value={message} placeholder="Message" focusBorderColor="black"
+                        onChange={(event:any) => setMessage(event.target.value)} spellCheck="true"/>
                         <EmailButton type="submit" onClick={SendEmail}>Send Email</EmailButton>
                     </EmailContainer>
                     <TextContainer>

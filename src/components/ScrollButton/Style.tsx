@@ -20,4 +20,9 @@ transform: scale(0);
     color: var(--primary-color); 
     transform: translate(0, -2.2vh) scale(1.2);
 }
+
+@media only screen and (max-width: 768px) {
+    font-size: 5vh;
+    right: 2vh;
+}
 `;

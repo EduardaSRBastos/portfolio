@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Icon } from "@chakra-ui/react";
 import { AiOutlineClose } from 'react-icons/ai';
 import { Buttons, Button, ButtonContainer, SidePanelContainer, CloseButton } from "./Style";
-import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
   const sidePanelRef = useRef<HTMLDivElement>(null);
@@ -41,40 +41,33 @@ export default function SidePanel({ isOpen, onClose }: SidePanelProps) {
     <SidePanelContainer className={isOpen ? "open" : ""} ref={sidePanelRef}>
       <CloseButton onClick={onClose}><Icon as={AiOutlineClose} /></CloseButton>
       <Buttons>
-        <ButtonContainer onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "/portfolio/#about";
-        }}>
-          <Button>
-            ABOUT ME
-          </Button>
+        <ButtonContainer>
+          <Link smooth to="#about">
+            <Button>
+              ABOUT ME
+            </Button>
+          </Link>
         </ButtonContainer>
-
-        <ButtonContainer onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "/portfolio/#skills";
-        }}>
-          <Button>
-            SKILLS
-          </Button>
+        <ButtonContainer>
+          <Link smooth to="#skills">
+            <Button>
+              SKILLS
+            </Button>
+          </Link>
         </ButtonContainer>
-
-        <ButtonContainer onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "/portfolio/#projects";
-        }}>
-          <Button>
-            PROJECTS
-          </Button>
+        <ButtonContainer>
+          <Link smooth to="#projects">
+            <Button>
+              PROJECTS
+            </Button>
+          </Link>
         </ButtonContainer>
-
-        <ButtonContainer onClick={(e) => {
-          e.preventDefault();
-          window.location.href = "/portfolio/#contact";
-        }}>
-          <Button>
-            CONTACT
-          </Button>
+        <ButtonContainer>
+          <Link smooth to="#contact">
+            <Button>
+              CONTACT
+            </Button>
+          </Link>
         </ButtonContainer>
       </Buttons>
     </SidePanelContainer>

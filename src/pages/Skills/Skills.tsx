@@ -152,49 +152,56 @@ export default function Skills() {
                             </Tooltip>
                             <Tooltip hasArrow label="Level 4" openDelay={300}>
                             <IconContainer>
-                                <Icons as={SiHtml5}/>
-                                <IconText>HTML</IconText>
+                                <Icons as={SiFigma}/>
+                                <IconText>Figma</IconText>
                             </IconContainer>
                             </Tooltip>
                         </IconsContainer>
                         <IconsContainer>
+                            <Tooltip hasArrow label="Level 4" openDelay={300}>
+                            <IconContainer>
+                                <Icons as={SiHtml5}/>
+                                <IconText>HTML</IconText>
+                            </IconContainer>
+                            </Tooltip>
+
                             <Tooltip hasArrow label="Level 4" openDelay={300}>
                             <IconContainer>
                                 <Icons as={SiCss3}/>
                                 <IconText>CSS</IconText>
                             </IconContainer>
                             </Tooltip>
-
+                        </IconsContainer>
+                        <IconsContainer>
                             <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
                                 <Icons as={SiJavascript}/>
                                 <IconText>JavaScript</IconText>
                             </IconContainer>
                             </Tooltip>
-                        </IconsContainer>
-                        <IconsContainer>
+
                             <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
                                 <Icons as={SiTypescript}/>
                                 <IconText>Typescript</IconText>
                             </IconContainer>
                             </Tooltip>
-
+                        </IconsContainer>
+                        <IconsContainer>
                             <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
                                 <Icons as={SiReact}/>
                                 <IconText>React</IconText>
                             </IconContainer>
                             </Tooltip>
-                        </IconsContainer>
-                        <IconsContainer>
-                            <Tooltip hasArrow label="Level 4" openDelay={300}>
+
+                            <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
-                                <Icons as={SiFigma}/>
-                                <IconText>Figma</IconText>
+                                <Icons as={SiAngular}/>
+                                <IconText>Angular</IconText>
                             </IconContainer>
                             </Tooltip>
-                    </IconsContainer>
+                        </IconsContainer>
                     </>)}
                 </ItemsContainer>
             </Container>

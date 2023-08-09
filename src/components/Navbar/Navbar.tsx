@@ -111,7 +111,7 @@ export default function Navbar() {
         <Buttons>
           <ButtonContainer>
             <Button onClick={onOpen}>
-              <Icon as={BiMenuAltRight} boxSize="10" position="absolute" right="0" top="0" bottom="0" m="auto" />
+              <Icon as={BiMenuAltRight} boxSize="10" position="absolute" right="-3" top="-2.5" bottom="0" m="auto" />
             </Button>
           </ButtonContainer>
           <SidePanel isOpen={isOpen} onClose={onClose} />

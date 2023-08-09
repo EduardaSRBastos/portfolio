@@ -105,6 +105,8 @@ export default function Projects() {
         }
         
     }
+    
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     return (
         <div id='projects'>
@@ -114,6 +116,7 @@ export default function Projects() {
                     <Title>PROJECTS</Title>
                 </TitleContainer>
                 <ItemsContainer  style={{zIndex: 1, position:"relative"}}>
+                {!isMobile ? (<>
                     <ProjectsContainer>
                         <ProjectContainer>
                             <ProjectImage src={Candyland} alt='Project Candyland' />
@@ -170,8 +173,70 @@ export default function Projects() {
                             <ProjectButton onClick={() =>setInfoModal("BeeIn")}>View</ProjectButton>
                             </ProjectTextContainer>
                         </ProjectContainer>
-                       
                     </ProjectsContainer>
+                    
+                    </>): (<>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={Candyland} alt='Project Candyland' />
+                            <ProjectTextContainer>
+                            <ProjectText>Candyland</ProjectText>
+                            <ProjectDescription>Three.js</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("Candyland")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={HMRE3} alt='Project HMRE' />
+                            <ProjectTextContainer>
+                            <ProjectText>HMRE</ProjectText>
+                            <ProjectDescription>HTML</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("HMRE")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={SBConceptMolds} alt='Project SB Concept Molds' />
+                            <ProjectTextContainer>
+                            <ProjectText>SB Concept Molds</ProjectText>
+                            <ProjectDescription>WinForms</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("SBConceptMolds")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={GameShop} alt='Project GameShop' />
+                            <ProjectTextContainer>
+                            <ProjectText>GameShop</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("GameShop")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={BeeTheBest} alt='Project Bee The Best' />
+                            <ProjectTextContainer>
+                            <ProjectText>Bee The Best</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("BeeTheBest")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    <ProjectsContainer>
+                        <ProjectContainer>
+                            <ProjectImage src={BeeIn} alt='Project BeeIn' />
+                            <ProjectTextContainer>
+                            <ProjectText>BeeIn</ProjectText>
+                            <ProjectDescription>React</ProjectDescription>
+                            <ProjectButton onClick={() =>setInfoModal("BeeIn")}>View</ProjectButton>
+                            </ProjectTextContainer>
+                        </ProjectContainer>
+                    </ProjectsContainer>
+                    </>)}
                 </ItemsContainer>
             </Container>
             <ProjectModal
