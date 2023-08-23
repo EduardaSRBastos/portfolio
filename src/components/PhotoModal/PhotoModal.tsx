@@ -33,7 +33,7 @@ export default function PhotoModal(
           <ModalBody mt="5.65vh" mb="5.65vh" display="flex" justifyContent="center" alignItems="center">
             <Box display="flex" w="100%" m="auto">
               <Box w="90%" display="flex" justifyContent="center">
-                  <Image src={`./Images/Art/${image}.png`} alt={title} maxW="90%" objectFit="contain"/>
+                  <Image src={`./Images/Photo/${image}.JPG`} alt={title} maxW="90%" objectFit="contain"/>
               </Box>
               <Box textAlign="justify" w="100%" h="100%" display="grid" m="auto">
                 <Text color="var(--primary-color)" fontSize="3.5vh" mb="2.7vh" textAlign="center">{title}</Text>

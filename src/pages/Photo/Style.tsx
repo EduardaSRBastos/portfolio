@@ -118,9 +118,9 @@ export const PictureButtonContainer = styled.div`
 export const PictureButton = styled(Button)`
   background-color: var(--primary-color) !important;
   color: black;
-  padding: 5%;
+  padding: 3%;
   margin-top: 2vh;
-  width: 25%;
+  width: 20%;
   border-radius: 5vh !important;
   height: 5vh !important;
   :hover {

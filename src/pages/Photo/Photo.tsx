@@ -35,7 +35,7 @@ export default function Photo() {
                 Circuito Internacional Vila Real<br/>02/07/2022<br/><br/>Vila Real<br/>SONY DSC-HX300<br/>f/4 1/2000sec ISO-160
               </div>
             );
-            setImage("DSC07735");
+            setImage("DSC07635");
             photoDisclosure.onToggle();
           } 
           else if (name === "White Plane") {
@@ -61,7 +61,7 @@ export default function Photo() {
     }
 
     const images = [
-      { src: "./Images/Photo/DSC07735.JPG", alt: "Light Blue Car Photo", name: "Light Blue Car" },
+      { src: "./Images/Photo/DSC07635.JPG", alt: "Light Blue Car Photo", name: "Light Blue Car" },
       { src: "./Images/Photo/DSC07648.JPG", alt: "White Plane Photo", name: "White Plane" },
       { src: "./Images/Photo/DSC07735.JPG", alt: "Light Blue Car Photo", name: "Light Blue Car" },
     ];
