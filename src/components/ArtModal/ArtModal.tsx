@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import { SiDeviantart, SiInstagram, SiRedbubble } from "react-icons/si";
 import IbisPaint from "../../Files/ibis-paint.png";
 
-export default function ProjectModal(
+export default function ArtModal(
   { title, setTitle, 
     description, setDescription,
     image, setImage,
     links, setLinks,
     ...props
   } 
-  : ProjectModalProps) {
+  : ArtModalProps) {
     function closeModal() {
       props.onClose();
   }
@@ -170,7 +170,7 @@ export default function ProjectModal(
   )
 }
 
-interface ProjectModalProps extends ModalProps {
+interface ArtModalProps extends ModalProps {
   title: string;
   setTitle: (a: string) => void;
   description: any;

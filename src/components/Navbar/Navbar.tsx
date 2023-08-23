@@ -22,7 +22,7 @@ export default function Navbar() {
     const [isLayoutPage, setIsLayoutPage] = useState(true);
 
     useEffect(() => {
-        if (window.location.hash.includes('/art')) {
+        if (window.location.hash.includes('/art') || window.location.hash.includes('/photo')) {
           setColorchange(false);
           setIsLayoutPage(false);
           window.scrollTo({

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import NotFound from "./pages/NotFound/NotFound";
 import Art from "./pages/Art/Art";
+import Photo from "./pages/Photo/Photo";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="/art" element={<Art />} />
+          <Route path="/photo" element={<Photo />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
