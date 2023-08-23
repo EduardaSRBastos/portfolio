@@ -27,6 +27,7 @@ export default function Art() {
     const [description, setDescription] = useState<any>();
     const [image, setImage] = useState<string>("");
     const [links, setLinks] = useState<any>([]);
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     function setInfoModal(name: string){
 
@@ -866,37 +867,40 @@ export default function Art() {
       return acc;
     }, []) : [];
     ;
+
+    const isMobileRows = isMobile ? [rows.flat()] : rows;
     
     return (
       <div id='art'>
         <Navbar />
         <SocialSideBar />
         <ScrollButton />
-        <Container>
-          <TitleContainer>
+        <Container>       
+        <TitleContainer>
             <Line />
             <Title>ART</Title>
-          <MenuButtonContainer>
-            <MenuButton
-              onClick={toggleShowAll}
-              style={{ backgroundColor: showAll ? "var(--primary-color)" : "white" }}
-            >
-              All
-            </MenuButton>
-            <MenuButton
-              onClick={toggleShowWallpapers}
-              style={{ backgroundColor: showWallpapers ? "var(--primary-color)" : "white" }}
-            >
-              Wallpaper
-            </MenuButton>
-            <MenuButton
-              onClick={toggleShowStickers}
-              style={{ backgroundColor: showStickers ? "var(--primary-color)" : "white" }}
-            >
-              Sticker
-            </MenuButton>
-          </MenuButtonContainer>
+            <MenuButtonContainer>
+              <MenuButton
+                onClick={toggleShowAll}
+                style={{ backgroundColor: showAll ? "var(--primary-color)" : "white" }}
+              >
+                All
+              </MenuButton>
+              <MenuButton
+                onClick={toggleShowWallpapers}
+                style={{ backgroundColor: showWallpapers ? "var(--primary-color)" : "white" }}
+              >
+                Wallpaper
+              </MenuButton>
+              <MenuButton
+                onClick={toggleShowStickers}
+                style={{ backgroundColor: showStickers ? "var(--primary-color)" : "white" }}
+              >
+                Sticker
+              </MenuButton>
+            </MenuButtonContainer>
           </TitleContainer>
+        {!isMobile ? (<>
           <ItemsContainer style={{ zIndex: 1}}>
             {rows.map((row, i) => (
               <PicturesContainer key={i}>
@@ -911,6 +915,22 @@ export default function Art() {
               </PicturesContainer>
             ))}
           </ItemsContainer>
+          </>):(<>
+          <ItemsContainer style={{ zIndex: 1}}>
+            {isMobileRows.map((row, i) => (
+              <PicturesContainer key={i}>
+                {row.map((img: { src: any; alt: any; name: string; }) => (
+                  <PictureContainer key={img.src}>
+                    <Picture src={img.src} alt={img.alt} />
+                    <PictureButtonContainer>
+                      <PictureButton onClick={() => setInfoModal(img.name)}>View</PictureButton>
+                    </PictureButtonContainer>
+                  </PictureContainer>
+                ))}
+              </PicturesContainer>
+            ))}
+          </ItemsContainer>
+          </>)}
         </Container>
         <ArtModal
           isOpen={artDisclosure.isOpen}

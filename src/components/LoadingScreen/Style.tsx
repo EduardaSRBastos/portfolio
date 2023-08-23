@@ -2,11 +2,11 @@ import { Box, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Body = styled.div`
-    padding:0;
-    margin:0;
-    height: 90vh;
-    max-width: 100%;
+    height: 100vh;
     background:radial-gradient(var(--primary-color), #ffb100);
+    @media only screen and (max-width: 768px) {
+        min-width: 115%;    
+    }
 `;
 
 export const BoxContainer = styled(Box)`
@@ -16,6 +16,9 @@ export const BoxContainer = styled(Box)`
     left:50%;
     top:45%;
     transform: translate(-50%, -50%);
+    @media only screen and (max-width: 768px) {
+        margin: -8% 8%;
+    }
 `;
 
 export const Circle = styled(Box)`

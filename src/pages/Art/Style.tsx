@@ -5,6 +5,11 @@ export const Container = styled.div`
   padding-top: 17.5vh;
   height: 90vh;
   background-color: #34353A;
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+    padding-top: 14vh;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -19,10 +24,6 @@ export const Line = styled(Box)`
   width: 4vh;
   margin-right: 2.5vh;
   box-shadow: 0 0 0.7vh black;
-
-  @media only screen and (max-width: 768px) {
-    width: 4vh;
-  }
 `;
 
 export const Title = styled(Text)`
@@ -41,6 +42,14 @@ export const MenuButtonContainer = styled.div`
   flex: auto;
   right: 15%;
   gap: 8%;
+
+  @media only screen and (max-width: 768px) {
+    top: 1.5%;
+    right: 15%;
+    z-index: 10;
+    gap: 5%;
+    position: fixed;
+  }
 `;
 
 export const MenuButton = styled(Button)`
@@ -51,6 +60,13 @@ export const MenuButton = styled(Button)`
     filter: brightness(110%);
     transform: scale(1.2);
   }
+
+  @media only screen and (max-width: 768px) {
+    flex: 0 0 35%;
+    height: 4vh !important;
+    border-radius: 1.5vh !important;
+    font-size: 2vh !important;
+  }
 `;
 
 export const ItemsContainer = styled.div`
@@ -58,12 +74,21 @@ export const ItemsContainer = styled.div`
   flex-wrap: wrap;
   margin-top: 2%;
   margin-left: 2.3%;
+
+  @media only screen and (max-width: 768px) {
+    margin: auto;
+  }
 `;
 
 export const PicturesContainer = styled.div`
   flex: 24%;
   max-width: 24%;
   padding: 0 2.5vh;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+    padding 0;
+  }
 `;
 
 export const PictureContainer = styled.div`
@@ -80,11 +105,20 @@ export const PictureContainer = styled.div`
   :hover {
     transform: scale(1.05);
   }
+
+  @media only screen and (max-width: 768px) {
+    margin: auto;
+  }
 `;
 
 export const Picture = styled(Image)`
   margin-top: 2vh;
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 5vh;
+    margin-left: 4vh;
+  }
 `;
 
 export const PictureButtonContainer = styled.div`
@@ -109,6 +143,10 @@ export const PictureButtonContainer = styled.div`
   :hover {
     opacity: 1;
     backdrop-filter: blur(0.4vh) brightness(0.5);
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 4vh;
   }
 `;
 

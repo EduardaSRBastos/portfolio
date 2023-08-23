@@ -17,6 +17,21 @@ export const SocialBarContainer = styled.div`
         width: 3%;
         height: 30%;
     }
+
+    @media only screen and (max-width: 768px) {
+      left: 20%;
+      top: 97%;
+      height: 8%;
+      width: 60%;
+      border-radius: 3vh 3vh 0 0;
+      display: flex;
+
+      :hover {
+        height: 10%;
+        width: 70%;
+        left: 15%;
+      }
+    }
 `;
 
 export const Links = styled(Link)`
@@ -42,6 +57,19 @@ export const Links = styled(Link)`
         font-size: 70%;
         opacity: 0;
         transition: all 0.5s ease-in-out;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+
+      :before {
+        left: -10%;
+        top: -60%;
+        margin: 0;
+        padding: 0 10%;
+      }
     }
 
     :hover:before { 
@@ -74,6 +102,11 @@ export const Icons = styled(Icon)`
   transition: 0.4s;
   max-width: 100%;
   left: 12%;
+
+  @media only screen and (max-width: 768px) {
+    left: 20%;
+    top: 12%;
+  }
 
   :hover { 
     filter: brightness(140%);

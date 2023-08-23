@@ -19,7 +19,7 @@ const App = () => {
       const startTimer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem("LoadingPage", "false");
-      }, 2500);
+      }, 3000);
       return () => clearTimeout(startTimer);
     }
   }, []);

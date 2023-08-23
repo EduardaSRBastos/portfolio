@@ -107,7 +107,7 @@ export default function Navbar() {
         </Buttons>
       )}
   
-      {isMobile && (
+      {isLayoutPage && isMobile && (
         <Buttons>
           <ButtonContainer>
             <Button onClick={onOpen}>

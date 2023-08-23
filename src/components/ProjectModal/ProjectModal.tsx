@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "./slick-theme.css";
 import Slider from "react-slick";
-import React from "react";
 
 export default function ProjectModal(
   { title, setTitle, 
@@ -42,6 +41,7 @@ export default function ProjectModal(
   const [color, setColor] = useState<any>([]);
   var i = 0;
   const [column, setColumn] = useState<number>(2);
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
   function generateRandomColor(size:number) {
     for(var i = 0; i< size; i++) {
@@ -68,6 +68,7 @@ export default function ProjectModal(
     <>
       <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true} scrollBehavior="inside">
         <ModalOverlay backdropFilter="blur(0.3vh)"/>
+        {!isMobile ? (
         <ModalContent bg="#34353A30" backdropFilter={"blur(5vh)"} maxW="169vh" maxH="87vh" m="auto" boxShadow="0 8px 32px 0 #34353A01" border="1px solid #34353A90" borderRadius="5vh">
           <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"var(--primary-color)", fontSize:"3.4vh" }} m="1%"/>
 
@@ -87,7 +88,7 @@ export default function ProjectModal(
             </Container>
             <Container display="flex" ml="0">
               <Container display="flex" w="177vh" mb="1.5vh">
-                <Container display="grid" gridTemplateColumns={`repeat(${column}, 1fr)`} m="auto" p="auto">
+                <Container display="grid" gridTemplateColumns={`repeat(${column}, 1fr)`} m="auto">
                   {technology.map((e: number) => (
                     <Box key={e} position="relative" display="flex" w="100%" flexDir="column">
                       <Button
@@ -123,6 +124,64 @@ export default function ProjectModal(
             </Container>
           </ModalBody>
         </ModalContent>
+        ):(
+          <ModalContent bg="#34353A30" backdropFilter={"blur(5vh)"} w="90%"  m="auto" boxShadow="0 8px 32px 0 #34353A01" border="1px solid #34353A90" borderRadius="5vh">
+          <ModalCloseButton fontSize="2.8vh" color="white" _hover={{ color:"var(--primary-color)", fontSize:"3.4vh" }} m="2%"/>
+
+          <ModalBody mt="8vh" p="0">
+            <Container display="grid">
+              <Container w="50%" m="0 0.5%">
+                <Slider {...settings}>
+                { image.map( (e:number) => 
+                  <Image  src={`./Images/${e}`} alt={title} maxW="100%" objectFit="contain"/>
+                  )}
+                </Slider>
+              </Container>
+              <Container textAlign="justify" cursor="default" w="52%" m="10vh 0 5vh 0" p="0">
+              <Text color="var(--primary-color)" fontSize="4vh" mb="2.7vh" textAlign="center">{title}</Text>
+              <Text color="white" fontSize="2.3vh" whiteSpace="pre-line">{description}</Text>
+              </Container>
+            </Container>
+            <Container display="grid" justifyContent="center">
+              <Container display="flex" p="0">
+                <Container display="grid" gridTemplateColumns={`repeat(${2}, 1fr)`} m="auto" p="0">
+                  {technology.map((e: number) => (
+                    <Box key={e} display="flex" w="100%" flexDir="column">
+                      <Button
+                        bg={"#" + color[++i]}
+                        _hover={{ filter: "brightness(110%)", transform: "scale(1.1)"}}
+                        color="white"
+                        fontSize="1.8vh"
+                        textShadow="0 0 0.14vh #000"
+                        m="0.7vh 1vh"
+                        p="1.5vh 1vh"
+                        cursor="default"
+                        borderRadius="2vh"
+                      >
+                        {e}
+                      </Button>
+                    </Box>
+                  ))}
+                </Container>
+              </Container>
+              <Container display="grid" justifyContent="center" mt="2vh">
+                {(haveGitRepo.length>0) &&(<>
+                <Link href={haveGitRepo} isExternal display="flex" justifyContent="center">
+                  <Button fontSize="2vh" bg="#BDBDBD" p="3.6vh 1.4vh" mb="2vh" _hover={{ filter: "brightness(110%)", transform: "scale(1.1)" }} borderRadius="1.5vh">
+                      View GitHub<br/>Repo</Button>
+                </Link>
+                </>)}
+              {(haveWebsite.length>0) &&(<>
+                <Link href={haveWebsite} isExternal>
+                  <Button fontSize="2.5vh" bg="var(--primary-color)" p="3.5vh 2.1vh" mb="2vh" _hover={{ filter: "brightness(110%)", transform: "scale(1.1)" }} borderRadius="1.5vh">
+                    View Website</Button>
+                </Link>
+                </>)}
+              </Container>
+            </Container>
+          </ModalBody>
+        </ModalContent>
+        )}
       </Modal>
     </>
   )
