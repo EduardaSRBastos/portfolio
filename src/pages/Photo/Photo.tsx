@@ -61,7 +61,7 @@ export default function Photo() {
     }
 
     const images = [
-      { src: "./Images/Photo/DSC07635.JPG", alt: "Light Blue Car Photo", name: "Light Blue Car" },
+      { src: "./Images/Photo/DSC07635.JPG", alt: "Blue Car Photo", name: "Blue Car" },
       { src: "./Images/Photo/DSC07648.JPG", alt: "White Plane Photo", name: "White Plane" },
       { src: "./Images/Photo/DSC07735.JPG", alt: "Light Blue Car Photo", name: "Light Blue Car" },
     ];
