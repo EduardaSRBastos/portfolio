@@ -1,13 +1,14 @@
 # My Portfolio Website - Eduarda's Portfolio
 
 This is my personal portfolio website, where I showcase my skills, projects, and experience as a web developer.  
-The website is built using HTML, CSS, and JavaScript, and it is hosted on GitHub Pages at [Eduarda's Portfolio](https://eduardasrbastos.github.io/portfolio/).
+The website is built using React.js and it is hosted on GitHub Pages at [Eduarda's Portfolio](https://eduardasrbastos.github.io/portfolio/).
 
 ## Table of Contents
 
 - [Features](#features)
 - [Technologies](#technologies)
 - [Usage](#usage)
+- [Extras](#extras)
 
 ## Features
 
@@ -26,10 +27,14 @@ The website is built using HTML, CSS, and JavaScript, and it is hosted on GitHub
 - JavaScript
 - TypeScript
 - Three.js
-- React
+- React.js
 - Styled Components
+- Figma
 
 ## Usage
 
 Visit the website at https://EduardaSRBastos.github.io/portfolio/ to see my projects and experience as a Software and Web Developer.  
-You can also contact me using the form on the contact page.
+You can also contact me using the form on the contact page.  
+
+## Extras
+Mockups (Figma): [Portfolio Mockups](https://www.figma.com/file/HWJocrH9lP9I93NBlJILrO/Portfolio).
