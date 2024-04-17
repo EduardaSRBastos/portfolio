@@ -39,9 +39,9 @@ export const ItemsContainer = styled.div`
   display: grid; 
   align-items: center;
   background: #4F5056;
-  margin: 5vh 20.5vh;
+  margin: 4vh 20.5vh;
   border-radius: 2.5vh;
-  padding-bottom: 7vh;
+  padding-bottom: 5vh;
   width: 80%;
   min-width: 134vh;
 
@@ -52,10 +52,9 @@ export const ItemsContainer = styled.div`
   }
 `;
 
-
 export const IconsContainer = styled.div`
   display: flex; 
-  margin: -4.3vh 2.7vh 2.8vh -2.8vh;
+  margin: -6vh 2.6vh 2vh -2.8vh;
   
   @media only screen and (max-width: 768px) {
     margin-left: 1vh;

@@ -3,6 +3,7 @@ import { Modal, ModalBody, ModalCloseButton, ModalContent,
 import { useEffect } from "react";
 import { SiDeviantart, SiInstagram, SiRedbubble } from "react-icons/si";
 import IbisPaint from "../../Files/ibis-paint.png";
+import CatPawBackground from "../../components/Background/CatPawBackground";
 
 export default function ArtModal(
   { title, setTitle, 
@@ -24,6 +25,7 @@ export default function ArtModal(
  
   return (
     <>
+    <CatPawBackground />
       <Modal isOpen={props.isOpen} onClose={closeModal} isCentered={true} scrollBehavior="inside">
         <ModalOverlay backdropFilter="blur(0.3vh)"/>
         {!isMobile ? (

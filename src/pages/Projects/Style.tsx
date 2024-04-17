@@ -70,6 +70,7 @@ export const ProjectContainer = styled.div`
     backdrop-filter: blur(0.4vh) brightness(0.5);
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    border-radius: 15px;
   }
 
   :hover::before {
@@ -81,6 +82,7 @@ export const ProjectImage = styled(Image)`
   width: 42.5vh;
   height: 28.2vh;
   max-width: 100%;
+  border-radius: 15px;
 `;
 
 export const ProjectTextContainer = styled.div`

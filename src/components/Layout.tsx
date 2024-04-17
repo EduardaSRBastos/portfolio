@@ -7,7 +7,6 @@ import Navbar from "./Navbar/Navbar";
 import ScrollButton from "./ScrollButton/ScrollButton";
 import { useEffect, useState } from "react";
 import { Home } from "../pages";
-import CatPawBackground from "../components/Background/CatPawBackground";
 
 const Layout = () => {
     const [is404, setIs404] = useState(false);
@@ -31,7 +30,6 @@ const Layout = () => {
         ): (
             <>
             <ScrollButton/>
-            <CatPawBackground />
             <Navbar/>
             <Home/>
             <About/>

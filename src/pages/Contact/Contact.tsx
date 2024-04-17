@@ -75,8 +75,8 @@ export default function Contact() {
                                     <Icon as={BsFillEnvelopeFill} _hover={{color: "#c71610", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
                                 </Link>
                             </Tooltip>
-                            <Tooltip hasArrow label="Resume"  openDelay={150} bg="#4940f8">
-                                <Link href="./EduardaBastosCV.pdf" download = "EduardaResume.pdf" target={"_blank"} m="40px 30px">
+                            <Tooltip hasArrow label="Resumé"  openDelay={150} bg="#4940f8">
+                                <Link href="./EduardaBastosCV.pdf" download = "EduardaResumé.pdf" target={"_blank"} m="40px 30px">
                                     <Icon as={BsFileEarmarkPersonFill} _hover={{color: "#4940f8", transform: "scale(1.2)"}} transition="0.4s" maxW=" 100%"/>
                                 </Link>
                             </Tooltip>

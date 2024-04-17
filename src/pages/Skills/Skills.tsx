@@ -1,6 +1,6 @@
-import { SiCsharp, SiMicrosoftsqlserver, SiVisualstudiocode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFigma, SiAngular } from 'react-icons/si';
-import { TfiLayoutTabWindow } from 'react-icons/tfi';
+import { SiCsharp, SiMicrosoftsqlserver, SiVisualstudiocode, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFigma, SiAngular, SiMulesoft, SiPython  } from 'react-icons/si';
 import { BsGithub } from 'react-icons/bs';
+import { FaJava } from "react-icons/fa";
 
 import {
     Container,
@@ -28,10 +28,24 @@ export default function Skills() {
                 <ItemsContainer  style={{zIndex: 1, position:"absolute"}}>
                 {!isMobile ? (<>
                     <IconsContainer>
-                    <Tooltip hasArrow label="Level 3" openDelay={300}>
+                        <Tooltip hasArrow label="Level 3" openDelay={300}>
                         <IconContainer>
                             <Icons as={SiCsharp}/>
                             <IconText>C# .NET</IconText>
+                        </IconContainer>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="Level 3" openDelay={300}>
+                        <IconContainer>
+                            <Icons as={FaJava}/>
+                            <IconText>Java</IconText>
+                        </IconContainer>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="Level 2" openDelay={300}>
+                        <IconContainer>
+                            <Icons as={SiPython}/>
+                            <IconText>Python</IconText>
                         </IconContainer>
                         </Tooltip>
 
@@ -48,28 +62,15 @@ export default function Skills() {
                             <IconText>Visual Studio<br/>VS Code</IconText>
                         </IconContainer>
                         </Tooltip>
-
-                        <Tooltip hasArrow label="Level 3" openDelay={300}>
-                        <IconContainer>
-                            <Icons as={TfiLayoutTabWindow}/>
-                            <IconText>WPF<br/>WinForms</IconText>
-                        </IconContainer>
-                        </Tooltip>
-
-                        <Tooltip hasArrow label="Level 3" openDelay={300}>
-                        <IconContainer>
-                            <Icons as={BsGithub}/>
-                            <IconText>GitHub</IconText>
-                        </IconContainer>
-                        </Tooltip>
+                    </IconsContainer>
+                    <IconsContainer>
                         <Tooltip hasArrow label="Level 4" openDelay={300}>
                         <IconContainer>
                             <Icons as={SiFigma}/>
                             <IconText>Figma</IconText>
                         </IconContainer>
                         </Tooltip>
-                    </IconsContainer>
-                    <IconsContainer>
+
                         <Tooltip hasArrow label="Level 4" openDelay={300}>
                         <IconContainer>
                             <Icons as={SiHtml5}/>
@@ -97,6 +98,9 @@ export default function Skills() {
                             <IconText>Typescript</IconText>
                         </IconContainer>
                         </Tooltip>
+                    </IconsContainer>
+
+                    <IconsContainer>
 
                         <Tooltip hasArrow label="Level 3" openDelay={300}>
                         <IconContainer>
@@ -105,10 +109,24 @@ export default function Skills() {
                         </IconContainer>
                         </Tooltip>
 
-                        <Tooltip hasArrow label="Level 3" openDelay={300}>
+                        <Tooltip hasArrow label="Level 2" openDelay={300}>
                         <IconContainer>
                             <Icons as={SiAngular}/>
                             <IconText>Angular</IconText>
+                        </IconContainer>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="Level 3" openDelay={300}>
+                        <IconContainer>
+                            <Icons as={SiMulesoft}/>
+                            <IconText>Mulesoft</IconText>
+                        </IconContainer>
+                        </Tooltip>
+
+                        <Tooltip hasArrow label="Level 3" openDelay={300}>
+                        <IconContainer>
+                            <Icons as={BsGithub}/>
+                            <IconText>GitHub</IconText>
                         </IconContainer>
                         </Tooltip>
                     </IconsContainer>
@@ -121,6 +139,20 @@ export default function Skills() {
                             </IconContainer>
                             </Tooltip>
 
+                            <Tooltip hasArrow label="Level 3" openDelay={300}>
+                            <IconContainer>
+                                <Icons as={FaJava}/>
+                                <IconText>Java</IconText>
+                            </IconContainer>
+                            </Tooltip>
+                        </IconsContainer>
+                        <IconsContainer>
+                            <Tooltip hasArrow label="Level 2" openDelay={300}>
+                            <IconContainer>
+                                <Icons as={SiPython}/>
+                                <IconText>Python</IconText>
+                            </IconContainer>
+                            </Tooltip>
                             <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
                                 <Icons as={SiMicrosoftsqlserver}/>
@@ -138,8 +170,8 @@ export default function Skills() {
 
                             <Tooltip hasArrow label="Level 3" openDelay={300}>
                             <IconContainer>
-                                <Icons as={TfiLayoutTabWindow}/>
-                                <IconText>WPF<br/>WinForms</IconText>
+                                <Icons as={SiMulesoft}/>
+                                <IconText>Mulesoft</IconText>
                             </IconContainer>
                             </Tooltip>
                         </IconsContainer>
