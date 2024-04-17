@@ -19,6 +19,7 @@ import { useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import ArtModal from "../../components/ArtModal/ArtModal";
 import SocialSideBar from "../../components/SocialSideBar/SocialSideBar";
+import CatPawBackground from "../../components/Background/CatPawBackground";
 
 export default function Art() {
 
@@ -872,6 +873,7 @@ export default function Art() {
     
     return (
       <div id='art'>
+        <CatPawBackground />
         <Navbar />
         <SocialSideBar />
         <ScrollButton />

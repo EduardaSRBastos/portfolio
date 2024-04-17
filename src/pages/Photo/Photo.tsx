@@ -16,6 +16,7 @@ import ScrollButton from "../../components/ScrollButton/ScrollButton";
 import { useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import PhotoModal from "../../components/PhotoModal/PhotoModal";
+import CatPawBackground from "../../components/Background/CatPawBackground";
 
 export default function Photo() {
 
@@ -76,6 +77,7 @@ export default function Photo() {
     
     return (
       <div id='photo'>
+        <CatPawBackground />
         <Navbar />
         <ScrollButton />
         <Container>       
